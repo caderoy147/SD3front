@@ -13,9 +13,11 @@ function App() {
       {/* <Header/>
       <Content/> */}
       {/* <Footer /> */}
-      <Dashboard/>
-      <SideBar/>
       <NavBar/>
+      <SideBar/>
+      <Dashboard/>
+      
+      
       
     </div>
   );

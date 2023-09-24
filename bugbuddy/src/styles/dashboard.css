@@ -51,6 +51,7 @@ body {
 
 
 /* SIDEBAR */
+
 #sidebar {
 	position: fixed;
 	top: 0;
@@ -60,7 +61,7 @@ body {
 	background: var(--light);
 	z-index: 2000;
 	font-family: var(--lato);
-	transition: .3s ease;
+	transition: width 0.3s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
 }
@@ -309,7 +310,7 @@ body {
 /* MAIN */
 #content main {
 	width: 100%;
-	padding: 36px 24px;
+	padding: 10px 25px;
 	font-family: var(--poppins);
 	max-height: calc(100vh - 56px);
 	overflow-y: auto;
@@ -519,7 +520,12 @@ body {
 /* CONTENT */
 
 
-
+.sameBoxTodoRp{
+	display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 75%;
+}
 
 
 
