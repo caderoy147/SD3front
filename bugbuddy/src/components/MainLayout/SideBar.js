@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/dashboard.css';
+import '../../styles/dashboard.css';
+
 
 const SideBar = () => {
   const [activeMenuItem, setActiveMenuItem] = useState(0);
@@ -43,14 +44,15 @@ const SideBar = () => {
   const handleMenuItemClick = (index) => {
     setActiveMenuItem(index);
   };
-
-  const toggleSidebar = () => {
+  
+  const handleSidebarToggle = () => {
     setIsSidebarHidden(!isSidebarHidden);
-		console.log('Toggled: isSidebarHidden =', isSidebarHidden);
+    console.log('Toggled: isSidebarHidden =', isSidebarHidden);
   };
 
   return (
     <section id="sidebar" className={isSidebarHidden ? 'hide' : ''}>
+      <i className='bx bx-menu' onClick={handleSidebarToggle}></i>
       <a href="#" className="brand">
         <i className='bx bxs-smile'></i>
         <span className="text">Bug Buddy</span>

@@ -1,25 +1,17 @@
-import Header from './Header'
-import Content from './Content';
-import Footer from './Footer';
-import Dashboard from './pages/Dashboard';
-import SideBar from './components/SideBar';
-import NavBar from './components/NavBar';
-
+import {Routes,Route} from 'react-router-dom'
+import Layout from './components/MainLayout/Layout';
+import Login from './components/Login';
+import LandingPage from './pages/LandingPage';
 
 function App() {
 
   return (
-    <div className="App">
-      {/* <Header/>
-      <Content/> */}
-      {/* <Footer /> */}
-      <NavBar/>
-      <SideBar/>
-      <Dashboard/>
-      
-      
-      
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<LandingPage/>}/>
+        <Route path="login" element={<Login/>}/>
+      </Route>
+    </Routes>
   );
 }
 

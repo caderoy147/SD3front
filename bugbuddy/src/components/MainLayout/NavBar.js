@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/dashboard.css';
+import '../../styles/dashboard.css';
+
 
 const NavBar = () => {
   const [isSidebarHidden, setIsSidebarHidden] = useState(false);
@@ -23,9 +24,10 @@ const NavBar = () => {
     };
   }, []);
 
-  const toggleSidebar = () => {
+  const handleSidebarToggle = () => {
     setIsSidebarHidden(!isSidebarHidden);
     console.log('Toggled: isSidebarHidden =', isSidebarHidden);
+    
   };
 
   const toggleSearchForm = (e) => {
@@ -47,7 +49,7 @@ const NavBar = () => {
   return (
     <section id="content">
       <nav>
-        <i className='bx bx-menu' onClick={toggleSidebar}></i>
+      <i className='bx bx-menu' onClick={handleSidebarToggle}></i>
         <a href="#" className="nav-link">Home</a>
         <form action="#">
           <div className="form-input">
