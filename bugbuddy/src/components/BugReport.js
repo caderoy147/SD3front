@@ -72,7 +72,7 @@ const BugReport = () => {
                 </div>
                 
                 <div className="form-submit-btn">
-                  <input type="submit" value="Register"/>
+                  <input type="submit" value="Report"/>
                 </div>
               </form>
             </div>

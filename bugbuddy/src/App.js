@@ -21,8 +21,9 @@ function App() {
         </Route>
 
 
-        <Route index element={<Public/>}/>
+        <Route index element={<LandingPage/>}/>
         <Route path="login" element={<Login/>}/>
+        
         <Route path="dash" element={<DashLayout />}>
 
           <Route index element={<Welcome />} />
@@ -36,6 +37,7 @@ function App() {
           </Route>
 
         </Route>{/* End Dash */}
+
       </Route>
     </Routes>
   );
