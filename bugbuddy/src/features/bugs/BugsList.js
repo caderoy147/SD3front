@@ -1,14 +1,14 @@
-import { useGetNotesQuery } from "./notesApiSlice"
-import Note from "./Note"
+import { useGetBugsQuery } from "./bugsApiSlice"
+import Bug from "./Bug1"
 
-const NotesList = () => {
+const BugsList = () => {
     const {
-        data: notes,
+        data: bugs,
         isLoading,
         isSuccess,
         isError,
         error
-    } = useGetNotesQuery()
+    } = useGetBugsQuery()
 
     let content
 
@@ -19,22 +19,22 @@ const NotesList = () => {
     }
 
     if (isSuccess) {
-        const { ids } = notes
+        const { ids } = bugs
 
         const tableContent = ids?.length
-            ? ids.map(noteId => <Note key={noteId} noteId={noteId} />)
+            ? ids.map(bugId => <Bug key={bugId} bugId={bugId} />)
             : null
 
         content = (
-            <table className="table table--notes">
+            <table className="table table--bugs">
                 <thead className="table__thead">
                     <tr>
-                        <th scope="col" className="table__th note__status">Username</th>
-                        <th scope="col" className="table__th note__created">Created</th>
-                        <th scope="col" className="table__th note__updated">Updated</th>
-                        <th scope="col" className="table__th note__title">Title</th>
-                        <th scope="col" className="table__th note__username">Owner</th>
-                        <th scope="col" className="table__th note__edit">Edit</th>
+                        <th scope="col" className="table__th bug__status">Username</th>
+                        <th scope="col" className="table__th bug__created">Created</th>
+                        <th scope="col" className="table__th bug__updated">Updated</th>
+                        <th scope="col" className="table__th bug__title">Title</th>
+                        <th scope="col" className="table__th bug__username">Owner</th>
+                        <th scope="col" className="table__th bug__edit">Edit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,4 +46,4 @@ const NotesList = () => {
 
     return content
 }
-export default NotesList
+export default BugsList

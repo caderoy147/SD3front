@@ -17,7 +17,6 @@ const Layout = () => {
     <div>
       <NavBar handleSidebarToggle={handleSidebarToggle} />
       <SideBar isSidebarHidden={isSidebarHidden} />
-      <Dashboard/>
     </div>
   )
 }

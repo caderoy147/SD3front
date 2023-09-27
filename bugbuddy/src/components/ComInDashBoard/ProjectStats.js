@@ -14,17 +14,17 @@ const ProjectStats = () => {
 							</span>
 						</li>
 						<li>
-							<i className='bx bxs-group' ></i>
+							<i className='bx bxs-calendar-check' ></i>
 							<span className="text">
 								<h3>1</h3>
 								<p>Finished Projects</p>
 							</span>
 						</li>
 						<li>
-							<i className='bx bxs-dollar-circle' ></i>
+							<i className='bx bxs-group' ></i>
 							<span className="text">
-								<h3>$5</h3>
-								<p>Total Tip</p>
+								<h3></h3>
+								<p>Team Members</p>
 							</span>
 						</li>
 					</ul>

@@ -1,4 +1,6 @@
 import React from 'react'
+import BugsList from '../../features/bugs/BugsList'
+import Bug1 from '../../features/bugs/Bug1'
 
 const RecentProjects = () => {
   return (
@@ -20,46 +22,7 @@ const RecentProjects = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    <img src="img/pak.png"/>
-                    <p>Rafael Sanchez</p>
-                  </td>
-                  <td>01-10-2021</td>
-                  <td><span className="status completed">Finished</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="img/pak.png"/>
-                    <p>Rafael Sanchez</p>
-                  </td>
-                  <td>01-10-2021</td>
-                  <td><span className="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="img/pak.png"/>
-                    <p>Rafael Sanchez</p>
-                  </td>
-                  <td>01-10-2021</td>
-                  <td><span className="status process">Ongoing</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="img/pak.png"/>
-                    <p>Rafael Sanchez</p>
-                  </td>
-                  <td>01-10-2021</td>
-                  <td><span className="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    {/* <img src="img/pak.png"> */}
-                    <p>Rafael Sanchez</p>
-                  </td>
-                  <td>01-10-2021</td>
-                  <td><span className="status completed">Ongoing</span></td>
-                </tr>
+                <BugsList/>
               </tbody>
             </table>
           </div>
