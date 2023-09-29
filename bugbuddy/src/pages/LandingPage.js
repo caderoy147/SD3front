@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import '../styles/landingPage.css'
 
+
 const LandingPage = () => {
+
+  const bugImage= "../images/bugBudLand.png";
+
   return (
     <div>
       {/* Meta tags */}
@@ -20,7 +24,6 @@ const LandingPage = () => {
       <title>BugBuddy</title>
       {/* NAVBAR */}
       <nav>
-      <Link to="/dashboard">DASHBOARD</Link>
         <div className="container">
           <div className="nav__wrapper">
             <a href="#" className="nav__brand">
@@ -30,7 +33,7 @@ const LandingPage = () => {
             <div className="nav__list__wrapper">
               <div className="nav__list">
                 <div className="nav__menu">
-                  <a href="#" className="nav__menu__item">Home</a>
+                  <a href="#" className="nav__menu__item"><Link to="/dashboard">Home</Link></a>
                   <a href="#about" className="nav__menu__item">About</a>
                   <a href="#testimonial" className="nav__menu__item">Testimonial</a>
                 </div>
@@ -85,7 +88,7 @@ const LandingPage = () => {
               </form>
             </div>
             <div className="header__image">
-              <img src="img/bugbuddy.png" alt="" />
+              <img src={bugImage} alt="" />
             </div>
           </div>
         </div>
