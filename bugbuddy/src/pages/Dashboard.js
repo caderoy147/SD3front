@@ -3,8 +3,6 @@ import Todo from '../components/ComInDashBoard/Todo'
 import ProjectStats from '../components/ComInDashBoard/ProjectStats'
 import RecentProjects from '../components/ComInDashBoard/RecentProjects'
 import BugReport from '../components/BugReport'; // Import BugReport component
-import SideBar from '../components/MainLayout/SideBar';
-import Layout2 from '../components/MainLayout/Layout2'
 import '../styles/dashboard.css'
 
 
@@ -19,9 +17,7 @@ const Dashboard = () => {
 
 
   return (
-    
     <div>
-    <Layout2/>
       <section id="content">
         <main>
           <div className="head-title">
