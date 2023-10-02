@@ -1,11 +1,9 @@
 import {Routes,Route} from 'react-router-dom'
+
 import Layout from './components/Layout';
 import Login from './components/Login';
 import LandingPage from './pages/LandingPage';
-import UsersList from './features/users/UsersList';
-import BugsList from './features/bugs/BugsList';
 import DashLayout from './components/DashLayout';
-import Welcome from './features/auth/Welcome';
 import Dashboard from './pages/Dashboard';
 
 import Team from './pages/Team';
@@ -13,6 +11,12 @@ import Settings from './pages/Settings';
 import MyProjects from './pages/MyProjects';
 import Analytics from './pages/Analytics';
 import Message from './pages/Message';
+
+import EditUser from './features/users/EditUser';
+import NewUserForm from './features/users/NewUserForm';
+import EditBug from './features/bugs/EditBug';
+import NewBug from './features/bugs/NewBug';
+
 
 function App() {
 
@@ -27,17 +31,10 @@ function App() {
 
           <Route index element={<Dashboard />} />
 
-          <Route path="bugs">
-            <Route index element={<BugsList />} />
-          </Route>
-
-          <Route path="users">
-            <Route index element={<UsersList />} />
-          </Route>
-
-
           <Route path="myProjects">
             <Route index element={<MyProjects />} />
+            <Route path=":id" element={<EditBug/>} />
+            <Route path="new" element={<NewBug/>} />
           </Route>
 
           
@@ -53,6 +50,8 @@ function App() {
 
           <Route path="team">
             <Route index element={<Team />} />
+            <Route path=":id" element={<EditUser/>} />
+            <Route path="new" element={<NewUserForm/>} />
           </Route>
 
 
