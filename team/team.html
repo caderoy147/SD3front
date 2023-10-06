@@ -7,7 +7,8 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="myprojects.css">
+	<link rel="stylesheet" href="team.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/profile.css' rel='stylesheet'>
 
 	<title>Bug Buddy</title>
 </head>
@@ -27,13 +28,13 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li class="active">
+			<li>
 				<a href="#">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">Assigned Projects</span>
 				</a>
 			</li>
-			<li>
+			<li  class="active">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Team</span>
@@ -87,10 +88,10 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Assigned Projects</h1>
+					<h1>Alpha</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">Projects</a>
+							<a href="#">My Projects</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
@@ -101,62 +102,37 @@
 			</div>
 
 
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Assigned Projects</h3>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Team Name</th>
-								<th>Bug Name</th>
-								<th>Date Assigned</th>
-								<th>Deadline</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><p>Alpha</p></td>
-								<td><p>auth stat bug</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>9-23-2023</p></td>
-								<td><p>Finished</p></td>
-							</tr>
-							<tr>
-								<td><p>Bravo</p></td>
-								<td><p>null exception</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>9-23-2023</p></td>
-								<td><p>Ongoing</p></td>
-							</tr>
-							<tr>
-								<td><p>Charlie</p></td>
-								<td><p>database spike</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>9-23-2023</p></td>
-								<td><p>Ongoing</p></td>
-							</tr>
-							<tr>
-								<td><p>Delta</p></td>
-								<td><p>css bugs</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>9-23-2023</p></td>
-								<td><p>Ongoing</p></td>
-							</tr>
-							<tr>
-								<td><p>Echo</p></td>
-								<td><p>null exception</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>9-23-2023</p></td>
-								<td><p>Ongoing</p></td>
-							</tr>
-						</tbody>
-					</table>
+			<div class="update">
+				<div class="chat-updates">
+					<i class='gg-profile'></i>
+                    <div class="chats-holder">
+                        <h1>Benedict Enjambre</h1>
+                        <p>Good morning! Discussion will be on Thursday na sa laboratory during our lab. No meeting for today, sorry for the delayed announcements</p>
+                        
+                        <div class="reply">
+                            <p>Reply</p>
+                        </div>
+                    </div>
 				</div>
-				
+                <div class="chat-updates">
+					<i class='gg-profile'></i>
+                    <div class="chats-holder">
+                        <div class="chats">
+                            <h1>Benedict Enjambre</h1>
+                            <p>Good morning! Discussion will be on Thursday na sa laboratory during our lab. No meeting for today, sorry for the delayed announcements</p>
+
+                            <div class="reply">
+                                <p>Reply</p>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="start-conversation">
+					 <p>Start a new Conversation</p>
+				</div>
+                <button class="update-post">Post</button>
 			</div>
+
 		</main>
 		<!-- MAIN -->
 	</section>
