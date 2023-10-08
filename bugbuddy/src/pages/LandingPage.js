@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import '../styles/landingPage.css'
+import '../index.css'
 
 
 const LandingPage = () => {
@@ -43,7 +43,6 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <i className='bx bx-menu nav__toggle'></i>
           </div>
         </div>
       </nav>

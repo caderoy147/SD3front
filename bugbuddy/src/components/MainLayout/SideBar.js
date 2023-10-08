@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import '../../styles/dashboard.css';
+import '../../index.css';
 
 const SideBar = () => {
   const [activeMenuItem, setActiveMenuItem] = useState(0);
@@ -57,7 +57,6 @@ const SideBar = () => {
 
   return (
     <section id="sidebar" className={isSidebarHidden ? 'hide' : ''}>
-      <i className='bx bx-menu' onClick={handleSidebarToggle}></i>
       <Link to="/" className="brand"> {/* Use Link instead of anchor tag */}
         <i className='bx bxs-smile'></i>
         <span className="text">Bug Buddy</span>

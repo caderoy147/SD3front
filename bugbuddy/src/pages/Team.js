@@ -1,6 +1,6 @@
 import React from 'react'
 import UsersList from '../features/users/UsersList'
-import '../styles/dashboard.css'
+import '../index.css'
 
 const Team = () => {
   return (

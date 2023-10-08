@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/dashboard.css'
+import '../index.css'
 
 import BugsList from '../features/bugs/BugsList'
 
