@@ -746,7 +746,7 @@ nav {
 
 /* HEADER */
 header {
-	background: var(--grey);
+	background: var(--grey-1);
 }
 .header__wrapper {
 	display: flex;
@@ -877,7 +877,7 @@ header {
 
 /* TESTIMONIAL */
 #testimonial {
-	background: var(--grey);
+	background: var(--grey-1);
 }
 .testimonial__list {
 	display: flex;
