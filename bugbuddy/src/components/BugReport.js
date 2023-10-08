@@ -6,7 +6,7 @@ const BugReport = () => {
   return (
     <div className="body1">
             <title>Bug Report Form</title>
-            <div className="container">
+            <div className="containerBug">
               <h1 className="form-title">Bug Report</h1>
               <form action="#">
                 <div className="main-user-info">
