@@ -4,6 +4,7 @@ import ProjectStats from '../components/ComInDashBoard/ProjectStats'
 import RecentProjects from '../components/ComInDashBoard/RecentProjects'
 import BugReport from '../components/BugReport'; // Import BugReport component
 import '../index.css'
+import '../styles/dashboard.css'
 
 
 const Dashboard = () => {
