@@ -417,6 +417,8 @@ body {
 	background: var(--light);
 	border-radius: 20px;
     height: auto;
+	justify-content: center;
+	align-items: center;
 }
 #content main .update > div {
 	border-radius: 20px;
@@ -434,6 +436,14 @@ body {
     width:100%;
     height: 200px;
     background: var(--grey);
+}
+#content main .update .chat-updates .chats-holder .user-input-box{
+    padding-left: 60px;
+	padding-top: 20px;
+}
+#content main .update .input{
+	width: 1000px;
+	height: 30px;
 }
 #content main .update .chat-updates .chats-holder .reply{
     margin-top: 90px;
@@ -454,6 +464,7 @@ body {
 }
 #content main .update .chat-updates .chats-holder p{
     padding-left: 60px;
+	padding-right: 30px;
 }
 #content main .update .start-conversation{
     height: auto;
