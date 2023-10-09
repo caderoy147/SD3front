@@ -19,9 +19,6 @@ const MyProjects = () => {
 							<table>
 								<thead>
 									<tr>
-										<th>User</th>
-										<th>Date Assigned</th>
-										<th>Status</th>
 									</tr>
 								</thead>
 								<tbody>

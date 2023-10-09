@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import '../../index.css';
+import '../../styles/dashboard.css';
 
 const SideBar = () => {
   const [activeMenuItem, setActiveMenuItem] = useState(0);
@@ -30,16 +30,6 @@ const SideBar = () => {
       to: '/dashboard/myProjects',
     },
     {
-      icon: 'bx bxs-doughnut-chart',
-      text: 'Analytics',
-      to: '/dashboard/analytics',
-    },
-    {
-      icon: 'bx bxs-message-dots',
-      text: 'Message',
-      to: '/dashboard/messages',
-    },
-    {
       icon: 'bx bxs-group',
       text: 'Team',
       to: '/dashboard/team',
@@ -57,6 +47,7 @@ const SideBar = () => {
 
   return (
     <section id="sidebar" className={isSidebarHidden ? 'hide' : ''}>
+
       <Link to="/" className="brand"> {/* Use Link instead of anchor tag */}
         <i className='bx bxs-smile'></i>
         <span className="text">Bug Buddy</span>

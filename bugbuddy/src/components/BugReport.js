@@ -12,10 +12,7 @@ const BugReport = () => {
                 <div className="main-user-info">
                   <div className="user-input-box">
                     <label for="bugNumber">Bug Number</label>
-                    <input type="text"
-                            id="bugNumber"
-                            name="bugNumber"
-                            placeholder="Enter Bug Number"/>
+                    <span>B10082301</span>
                   </div>
                   <div className="user-input-box">
                     <label for=" Bug Name">Bug Name</label>
@@ -26,10 +23,13 @@ const BugReport = () => {
                   </div>
                   <div className="user-input-box">
                     <label for="severity">Severity</label>
-                    <input type="text"
-                            id="severity"
-                            name="severity"
-                            placeholder="Severity"/>
+                    <select>
+                      <option value="critical">critical</option>
+                      <option value="high">high</option>
+                      <option value="medium">medium</option>
+                      <option value="low">low</option>
+
+                    </select>
                   </div>
                   <div className="user-input-box">
                     <label for="environment">Environment</label>
@@ -46,11 +46,11 @@ const BugReport = () => {
                             placeholder="Description"/>
                   </div>
                   <div className="user-input-box">
-                    <label for="reproduction">Reproduction</label>
+                    <label for="steps">Steps</label>
                     <input type="text"
-                            id="reproduction"
-                            name="reproduction"
-                            placeholder="Reproduction"/>
+                            id="steps"
+                            name="steps"
+                            placeholder="Steps"/>
                   </div>
 
                   <div className="user-input-box">
