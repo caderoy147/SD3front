@@ -563,7 +563,8 @@ BUG REPORT
 }
 .form-submit-btn input:hover{
     background: #000000;
-    color: #3C91E6;
+    color: #ffffff;
+	transition: .5s;
 }
 .button-container {
 	display: flex;
