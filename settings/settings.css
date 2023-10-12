@@ -1,5 +1,56 @@
-/* SIDEBAR */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--blue: #3C91E6;
+	--light-blue: #CFE8FF;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body.dark {
+	--light: #0C0C1E;
+	--grey: #060714;
+	--dark: #FBFBFB;
+}
+
+body {
+	background: var(--grey);
+	overflow-x: hidden;
+}
+
+
+
+
+
+/* SIDEBAR */
 #sidebar {
 	position: fixed;
 	top: 0;
@@ -9,7 +60,7 @@
 	background: var(--light);
 	z-index: 2000;
 	font-family: var(--lato);
-	transition: width 0.3s ease;
+	transition: .3s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
 }
@@ -20,6 +71,7 @@
 	width: 60px;
 }
 #sidebar .brand {
+	font-family: boxicons!important;
 	font-size: 24px;
 	font-weight: 700;
 	height: 56px;
@@ -33,6 +85,7 @@
 	z-index: 500;
 	padding-bottom: 20px;
 	box-sizing: content-box;
+	padding-left: 30px;
 }
 #sidebar .brand .bx {
 	min-width: 60px;
@@ -106,7 +159,11 @@
 	display: flex;
 	justify-content: center;
 }
+
 /* SIDEBAR */
+
+
+
 
 
 /* CONTENT */
@@ -255,7 +312,8 @@
 /* MAIN */
 #content main {
 	width: 100%;
-	padding: 10px 25px;
+	padding: 36px 24px;
+	font-family: var(--poppins);
 	max-height: calc(100vh - 56px);
 	overflow-y: auto;
 }
@@ -288,6 +346,8 @@
 	color: var(--blue);
 	pointer-events: unset;
 }
+
+BUG REPORT
 #content main .head-title .btn-download {
 	height: 36px;
 	padding: 0 16px;
@@ -393,7 +453,6 @@
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
-	border-bottom: 1px solid var(--grey);
 }
 #content main .table-data .order table td {
 	padding: 16px 0;
@@ -433,9 +492,8 @@
 
 #content main .table-data .todo {
 	flex-grow: 1;
-	flex-basis: 100px;
-
-}	
+	flex-basis: 300px;
+}
 #content main .table-data .todo .todo-list {
 	width: 100%;
 }
@@ -463,16 +521,57 @@
 }
 /* MAIN */
 /* CONTENT */
-
-
-.sameBoxTodoRp{
-  display: inline-flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 75%;
+.main-user-info{
+    display: flex;
+	align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 0;
 }
-
-
+.user-input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    padding-bottom: 10px;
+	line-height: 65px
+}
+.user-input-box input{
+    height: 35px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(218, 218, 218);
+    padding: 0 10px;
+	background-color: rgb(202, 201, 201);
+}
+.form-submit-btn{
+    margin-top: 35px;
+	display: flex;
+	margin-inline: 20px;
+}
+.form-submit-btn input{
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 15px;
+	font-weight: bold;
+    padding: 10px;
+    border:none;
+    border-radius: 50px;
+    color: #000000;
+    background: #3C91E6;
+}
+.form-submit-btn input:hover{
+    background: #000000;
+    color: #3C91E6;
+}
+.button-container {
+	display: flex;
+	justify-content: center; /* Center buttons horizontally */
+	align-items: center; /* Center buttons vertically */
+	height: 3h; /* Optional: Center vertically within the viewport */
+	margin: 0 10px; /* Add margin to create space between buttons */
+  }
 
 
 
