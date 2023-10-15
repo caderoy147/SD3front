@@ -60,8 +60,12 @@ body{
 }
 
 .dropdown {
+    height: 40px;
     width: 95%;
-    font-size: 30px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
 }
 
 .user-input-box label{
@@ -97,6 +101,7 @@ body{
     border:none;
     border-radius: 3px;
     background: #3C91E6;
+    text-align: center;
 }
 
 .form-submit-btn input:hover{

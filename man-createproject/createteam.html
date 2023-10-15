@@ -9,20 +9,24 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="form-title">Create a Team</h1>
+      <h1 class="form-title">Members</h1>
       <form action="#">
         <div class="main-user-info">
           <div class="user-input-box">
-            <label for="bugNumber">Team</label>
+            <label for="bugNumber">Bug Name</label>
             <input type="text"
                     id="bugNumber"
                     name="bugNumber">
           </div>
           <div class="user-input-box">
-            <label for=" Bug Name">Project Manager</label>
-            <input type="text"
-                    id="bugName"
-                    name="bugName">
+            <label for="Severity">Severity</label>
+            <select>
+              <option value="critical">critical</option>
+              <option value="high">high</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+
+            </select>
           </div>
           <div class="user-input-box">
             <label for="severity">Developer</label>
@@ -40,7 +44,7 @@
         </div>
         
         <div class="form-submit-btn">
-          <input type="submit" value="Register">
+          <input type="submit" value="Create">
         </div>
       </form>
     </div>

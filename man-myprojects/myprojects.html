@@ -7,8 +7,7 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="team.css">
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/profile.css' rel='stylesheet'>
+	<link rel="stylesheet" href="myprojects.css">
 
 	<title>Bug Buddy</title>
 </head>
@@ -28,16 +27,16 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
+			<li class="active">
 				<a href="#">
 					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Assigned Projects</span>
+					<span class="text">My Projects</span>
 				</a>
 			</li>
-			<li  class="active">
+			<li>
 				<a href="#">
 					<i class='bx bxs-group' ></i>
-					<span class="text">Team</span>
+					<span class="text">Project Status</span>
 				</a>
 			</li>
 		</ul>
@@ -88,7 +87,7 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Alpha</h1>
+					<h1>My Projects</h1>
 					<ul class="breadcrumb">
 						<li>
 							<a href="#">My Projects</a>
@@ -99,52 +98,63 @@
 						</li>
 					</ul>
 				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Create Project</span>
+				</a>
 			</div>
 
 
-			<div class="update">
-				<div class="chat-updates">
-					<i class='gg-profile'></i>
-                    <div class="chats-holder">
-                        <h1>Benedict Enjambre</h1>
-                        <p>Good morning! Discussion will be on Thursday na sa laboratory during our lab. No meeting for today, sorry for the delayed announcements</p>
-                        
-                        <div class="user-input-box">
-							<input class= "input"
-									type="text"
-									id="Reply"
-									name="Reply"
-									placeholder="Reply">
-						</div>
-                    </div>
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>List of Projects</h3>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Bug Name</th>
+								<th>Date Assigned</th>
+								<th>Severity</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><p>auth stat bug</p></td>
+								<td><p>9-01-2023</p></td>
+								<td><p>critical</p></td>
+								<td><p>Active</p></td>
+							</tr>
+							<tr>
+								<td><p>null exception</p></td>
+								<td><p>9-01-2023</p></td>
+								<td><p>high</p></td>
+								<td><p>Active</p></td>
+							</tr>
+							<tr>
+								<td><p>database spike</p></td>
+								<td><p>9-01-2023</p></td>
+								<td><p>medium</p></td>
+								<td><p>Active</p></td>
+							</tr>
+							<tr>
+								<td><p>css bugs</p></td>
+								<td><p>9-01-2023</p></td>
+								<td><p>low</p></td>
+								<td><p>Inactive</p></td>
+							</tr>
+							<tr>
+								<td><p>null exception</p></td>
+								<td><p>9-01-2023</p></td>
+								<td><p>low</p></td>
+								<td><p>Inactive</p></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-                <div class="chat-updates">
-					<i class='gg-profile'></i>
-                    <div class="chats-holder">
-                        <div class="chats">
-                            <h1>Benedict Enjambre</h1>
-                            <p>Good morning! Discussion will be on Thursday na sa laboratory during our lab. No meeting for today, sorry for the delayed announcements</p>
-
-							<div class="user-input-box">
-								<input class= "input"
-										type="text"
-										id="Reply"
-										name="Reply"
-										placeholder="Reply">
-							</div>
-                        </div>
-                    </div>
-				</div>
-				<div class="start-conversation">
-					<input class= "input"
-							type="text"
-							id="Reply"
-							name="Reply"
-							placeholder="Start new conversation">
-				</div>
-                <button class="update-post">Post</button>
+				
 			</div>
-
 		</main>
 		<!-- MAIN -->
 	</section>
