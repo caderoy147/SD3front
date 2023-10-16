@@ -77,6 +77,15 @@ body{
     padding: 0 10px;
 }
 
+.user-input-box select{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
 
 .form-submit-btn{
     margin-top: 40px;
