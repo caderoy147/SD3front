@@ -468,10 +468,9 @@
 
 
 .sameBoxTodoRp{
-  display: inline-flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 75%;
+	display: inline-flex;
+	align-items: baseline;
+	width: 100%;
 }
 
 
@@ -557,3 +556,10 @@
   left: 60px;
   transition: left 0.3s ease, width 0.3s ease;
 }
+
+
+
+#sidebar .brand .hide .text{
+	display: none;
+}
+

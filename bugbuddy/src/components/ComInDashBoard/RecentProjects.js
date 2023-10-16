@@ -4,7 +4,6 @@ import Bug1 from '../../features/bugs/Bug1'
 
 const RecentProjects = () => {
   return (
-    <section id="content">
       <main>
        <div className="table-data">
           <div className="order">
@@ -28,7 +27,6 @@ const RecentProjects = () => {
           </div>
         </div>
       </main>
-    </section>
   )
 }
 

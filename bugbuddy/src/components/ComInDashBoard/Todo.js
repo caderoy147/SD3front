@@ -4,8 +4,6 @@ import '../../index.css'
 
 const Todo = () => {
   return (
-    <section id="content">
-    <main>
       <div className='table-data'>
         <div className="todo">
               <div className="head">
@@ -37,8 +35,6 @@ const Todo = () => {
               </ul>
             </div>
           </div>
-        </main>
-      </section>
   )
 }
 

@@ -21,7 +21,6 @@ const DashLayout = () => {
           <Outlet />
         </main>
       </section>
-      <DashFooter />
     </>
   );
 };

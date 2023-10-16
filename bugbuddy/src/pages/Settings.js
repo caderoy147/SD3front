@@ -5,13 +5,9 @@ import '../styles/settings.css' // Make sure to update the path based on your pr
 const Settings = () => {
   return (
     <div>
-            <title>Setting</title>
-        <body>
-            {/* content */}
-            <section id="content">
-        
+
                 {/* main */}
-                <main>
+
                     <div className="head-title">
                         <div className="left">
                             <h1>Settings</h1>
@@ -33,68 +29,63 @@ const Settings = () => {
 						<h3>Account Settings</h3>
 					</div>
 					<table>
-                        <div class="main-user-info">
-                            <div class="user-input-box">
-                                <label for="fname">First Name</label>
-                                <input type="text"
-                                        id="fname"
-                                        name="fname"
-                                        placeholder="Enter First Name"/>
-                            </div>
-                            <div class="user-input-box">
-                                <label for="lname">Last Name</label>
-                                <input type="text"
-                                        id="lname"
-                                        name="lname"
-                                        placeholder="Enter Last Name"/>
-                            </div>
-                            <div class="user-input-box">
-                                <label for="company">Company</label>
-                                <input type="text"
-                                        id="company"
-                                        name="company"
-                                        placeholder="Enter Company"/>
-                            </div>
-                            <div class="user-input-box">
-                                <label for="mail">Email</label>
-                                <input type="text"
-                                        id="mail"
-                                        name="mail"
-                                        placeholder="Enter Email Address"/>
-                            </div>
-                            <div class="user-input-box">
-                                <label for="cellnum">Contact Number</label>
-                                <input type="text"
-                                        id="cellnum"
-                                        name="cellnum"
-                                        placeholder="Enter Contact Number"/>
-                            </div>
-                            <div class="user-input-box">
-                                <label for="passw">Password</label>
-                                <input type="text"
-                                        id="passw"
-                                        name="passw"
-                                        placeholder="Enter Password"/>
-                            </div>
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="fname">First Name</label>
+                        <input type="text"
+                                id="fname"
+                                name="fname"
+                                placeholder="Enter First Name"/>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="lname">Last Name</label>
+                        <input type="text"
+                                id="lname"
+                                name="lname"
+                                placeholder="Enter Last Name"/>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="company">Company</label>
+                        <input type="text"
+                                id="company"
+                                name="company"
+                                placeholder="Enter Company"/>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="mail">Email</label>
+                        <input type="text"
+                                id="mail"
+                                name="mail"
+                                placeholder="Enter Email Address"/>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="cellnum">Contact Number</label>
+                        <input type="text"
+                                id="cellnum"
+                                name="cellnum"
+                                placeholder="Enter Contact Number"/>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="passw">Password</label>
+                        <input type="text"
+                                id="passw"
+                                name="passw"
+                                placeholder="Enter Password"/>
+                    </div>
 
-                        </div>
-                        <div class="button-container">
-                            <div class="form-submit-btn">
-                                <input type="submit" value="Save"/>
-                            </div>
-                            <div class="form-submit-btn">
-                                <input type="submit" value="Cancel"/>
-                            </div>
-                        </div>
+                </div>
+                <div class="button-container">
+                    <div class="form-submit-btn">
+                        <input type="submit" value="Save"/>
+                    </div>
+                    <div class="form-submit-btn">
+                        <input type="submit" value="Cancel"/>
+                    </div>
+                </div>
 
 					</table>
 				</div>
-			</div>
-                </main>
-                {/* MAIN */}
-            </section>
-            {/* CONTENT */}
-        </body>
+      </div>
       </div>
   );
 }
