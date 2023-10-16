@@ -51,7 +51,7 @@ const Layout2 = ({ toggleSidebar }) => {
   const menuItems = [
     { icon: 'bx bxs-dashboard', text: 'Dashboard', to: '/dashboard' },
     { icon: 'bx bxs-shopping-bag-alt', text: 'My Projects', to: '/dashboard/myProjects' },
-    { icon: 'bx bxs-group', text: 'Team', to: '/dashboard/team' },
+    { icon: 'bx bxs-group', text: 'Project Status', to: '/dashboard/team' },
   ];
   const handleMenuClick = () => {
     toggleSidebar();
