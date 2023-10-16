@@ -9,8 +9,8 @@ import Dashboard from './pages/Dashboard';
 import Team from './pages/Team';
 import Settings from './pages/Settings';
 import MyProjects from './pages/MyProjects';
-import Analytics from './pages/Analytics';
-import Message from './pages/Message';
+import Profile from './pages/Profile';
+
 
 import EditUser from './features/users/EditUser';
 import NewUserForm from './features/users/NewUserForm';
@@ -37,17 +37,6 @@ function App() {
             <Route path="new" element={<NewBug/>} />
           </Route>
 
-          
-          <Route path="analytics">
-            <Route index element={<Analytics />} />
-          </Route>
-
-          
-          <Route path="messages">
-            <Route index element={<Message />} />
-          </Route>
-
-
           <Route path="team">
             <Route index element={<Team />} />
             <Route path=":id" element={<EditUser/>} />
@@ -57,6 +46,10 @@ function App() {
 
           <Route path="settings">
             <Route index element={<Settings />} />
+          </Route>
+
+          <Route path="profile">
+            <Route index element={<Profile />} />
           </Route>
 
         </Route>{/* End Dash */}

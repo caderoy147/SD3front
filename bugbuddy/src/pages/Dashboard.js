@@ -19,8 +19,6 @@ const Dashboard = () => {
 
   return (
     <div>
-      <section id="content">
-        <main>
           <div className="head-title">
             <div className="left">
               <h1>Dashboard</h1>
@@ -39,8 +37,6 @@ const Dashboard = () => {
               <span className="text">Report a Bug</span>
             </a>
           </div>
-        </main>
-      </section>
       {!bugReportVisible && (
       <ProjectStats />
       )}

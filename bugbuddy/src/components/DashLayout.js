@@ -1,21 +1,29 @@
-import { Outlet } from 'react-router-dom'
-import DashHeader from './DashHeader'
-import DashFooter from './DashFooter'
-import Dashboard from '../pages/Dashboard'
-import SideBar from './MainLayout/SideBar'
-import NavBar from './MainLayout/NavBar'
+import { Outlet } from 'react-router-dom';
+import DashFooter from './DashFooter';
+import Layout2 from './MainLayout/Layout2';
+import '../index.css';
+import React, { useState, useEffect } from 'react';
 
 const DashLayout = () => {
-    return (
-        <>
-            <NavBar/>
-            <SideBar/>
-            <div className="dash-container">
-                {/* <Dashboard/> */}
-                <Outlet />
-            </div>
-            <DashFooter />
-        </>
-    )
-}
-export default DashLayout
+  const [contentClass, setContentClass] = useState('');
+  const [isSidebarHidden, setIsSidebarHidden] = useState(window.innerWidth < 768);
+
+  const toggleSidebar = () => {
+    setIsSidebarHidden(!isSidebarHidden);
+    setContentClass(isSidebarHidden ? '' : 'hide-sidebar');
+  };
+
+  return (
+    <>
+      <Layout2 toggleSidebar={toggleSidebar} />
+      <section id="content" className={contentClass}>
+        <main>
+          <Outlet />
+        </main>
+      </section>
+      <DashFooter />
+    </>
+  );
+};
+
+export default DashLayout;
