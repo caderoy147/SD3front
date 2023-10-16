@@ -47,6 +47,7 @@ body {
 }
 
 button {
+	font-size: 20px;
 	color: white;
 	padding: 7px 25px;
 	border: 0px;
@@ -288,7 +289,7 @@ button:hover {
 	border-radius: 50%;
 }
 #content nav .switch-mode {
-	display: block;
+	/* display: block; */
 	min-width: 50px;
 	height: 25px;
 	border-radius: 25px;
@@ -317,6 +318,38 @@ button:hover {
 
 
 /* MAIN */
+button #done {
+	margin-left: 500px;
+}
+#container{
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+.labels-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.labels {
+	padding: 20px;
+}
+.label-text {
+	width: 500px;
+	height: 40px;
+	display: flex;
+	border-radius: 20px;
+	background: #D9D9D9;
+}
+.label-text p{
+	padding-top: 6px;
+	padding-left: 20%;
+	justify-content: center;
+	border-radius: 20px;
+	background: #D9D9D9;
+}
 #content main {
 	width: 100%;
 	padding: 36px 24px;
@@ -424,9 +457,6 @@ button:hover {
 	margin-top: 24px;
 	width: 100%;
 	color: var(--dark);
-}
-.label-text {
-	background: var(--dark);
 }
 #content main .table-data > div {
 	border-radius: 20px;
