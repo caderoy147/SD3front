@@ -331,6 +331,11 @@ button:hover {
 	grid-gap: 16px;
 	flex-wrap: wrap;
 }
+#content main .head-title button:hover{
+	cursor: pointer;
+	color: #3C91E6;
+	background-color: white;
+}
 #content main .head-title .left h1 {
 	font-size: 36px;
 	font-weight: 600;
