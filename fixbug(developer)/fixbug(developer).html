@@ -7,7 +7,7 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="bugworkspace(manager).css">
+	<link rel="stylesheet" href="fixbug(developer).css">
 
 	<title>Bug Buddy</title>
 </head>
@@ -27,13 +27,13 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li class="active">
+			<li>
 				<a href="#">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">Bug Workspace</span>
 				</a>
 			</li>
-			<li>
+			<li class="active">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Bug Status</span>
@@ -87,59 +87,51 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-						<h1>Bug Workspace</h1>
+						<h1>null exception</h1>
 						<ul class="breadcrumb">
 							<li>
-								<a class="active" href="#">Bug Workspace</a>
+								<a href="#">Bug Status</a>
 							</li>
 							<li><i class='bx bx-chevron-right' ></i></li>
+							<li>
+								<a href="#">Parking System</a>
+							</li>
+							<li><i class='bx bx-chevron-right' ></i></li>
+							<li>
+								<a class="active" href="#">null exception</a>
+							</li>
 						</ul>
+				</div>	
+				<div class="display-text">
+					<h1>Name</h1>
+					<p>Ken Vincent Fernandez</p>
 				</div>
-				<button>Create Bug Workspace</button>
+				<div class="display-text">
+					<h1>Position</h1>
+					<p>Developer</p>
+				</div>
+				<div class="display-text">
+					<h1>Progress</h1>
+					<p>Finished</p>
+				</div>
 			</div>
 
-
-			<div class="table-data">
-				<div class="order">
-					<table>
-						<thead>
-							<tr>
-								<th>Project Name</th>
-								<th>Date Assigned</th>
-								<th>Progress</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><p>Parking System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Bus Route System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Project Management System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Bus Tracking Tool</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Attendance Checker System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-						</tbody>
-					</table>
+			<div class="table-data-container">
+				<div class="table-data">
+					<h1>Message</h1>
+					<div class="message-box">
+						<p>I was able to fix bug by applying ...</p>
+					</div>
 				</div>
-				
-			</div>
+				<div class="table-data">
+					<h1>Proof</h1>
+					<button class="attach-image">Attach Image</button>
+				</div>
+				<div class="table-data">
+					<button>Submit to QA</button>
+					<button>Exit</button>
+				</div>
+			</div>	
 		</main>
 		<!-- MAIN -->
 	</section>
