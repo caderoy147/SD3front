@@ -1,4 +1,5 @@
 import {Routes,Route} from 'react-router-dom'
+import Prefetch from './features/auth/Prefetch';
 
 import Layout from './components/Layout';
 import Login from './components/Login';
@@ -27,33 +28,42 @@ function App() {
         <Route index element={<LandingPage/>}/>
         <Route path="login" element={<Login/>}/>
         
-        <Route path="dashboard" element={<DashLayout />}>
+        <Route element={<Prefetch/>}>
 
-          <Route index element={<Dashboard />} />
+          <Route path="dashboard" element={<DashLayout />}>
 
-          <Route path="myProjects">
-            <Route index element={<MyProjects />} />
-            <Route path=":id" element={<EditBug/>} />
-            <Route path="new" element={<NewBug/>} />
-          </Route>
+            <Route index element={<Dashboard />} />
 
-          <Route path="team">
-            <Route index element={<Team />} />
-            <Route path=":id" element={<EditUser/>} />
-            <Route path="new" element={<NewUserForm/>} />
-          </Route>
+            <Route path="myProjects">
+              <Route index element={<MyProjects />} />
+              <Route path=":id" element={<EditBug/>} />
+              <Route path="new" element={<NewBug/>} />
+            </Route>
+
+            <Route path="team">
+              <Route index element={<Team />} />
+              <Route path=":id" element={<EditUser/>} />
+              <Route path="new" element={<NewUserForm/>} />
+            </Route>
+
+            <Route path="user">
+              <Route index element={<Team />} />
+              <Route path=":id" element={<EditUser/>} />
+              <Route path="new" element={<NewUserForm/>} />
+            </Route>
 
 
-          <Route path="settings">
-            <Route index element={<Settings />} />
-          </Route>
+            <Route path="settings">
+              <Route index element={<Settings />} />
+            </Route>
 
-          <Route path="profile">
-            <Route index element={<Profile />} />
-          </Route>
+            <Route path="profile">
+              <Route index element={<Profile />} />
+            </Route>
 
-        </Route>{/* End Dash */}
+          </Route>{/* End Dash */}
 
+        </Route>
       </Route>
     </Routes>
   );
