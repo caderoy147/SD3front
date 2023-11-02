@@ -1,7 +1,7 @@
 import React from 'react'
-import '../index.css'
+import '../../index.css'
 
-import BugsList from '../features/bugs/BugsList'
+import BugsList from '../../features/bugs/BugsList'
 
 const MyProjects = () => {
   return (

@@ -1,10 +1,10 @@
 import React , { useState } from 'react'
-import Todo from '../components/ComInDashBoard/Todo'
-import ProjectStats from '../components/ComInDashBoard/ProjectStats'
-import RecentProjects from '../components/ComInDashBoard/RecentProjects'
-import BugReport from '../components/BugReport'; // Import BugReport component
-import '../index.css'
-import '../styles/dashboard.css'
+import Todo from '../../components/ComInDashBoard/Todo'
+import ProjectStats from '../../components/ComInDashBoard/ProjectStats'
+import RecentProjects from '../../components/ComInDashBoard/RecentProjects'
+import BugReport from '../../components/comDev/BugReport'; // Import BugReport component
+import '../../index.css'
+import '../../styles/dashboard.css'
 
 
 const Dashboard = () => {

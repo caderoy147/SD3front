@@ -1,6 +1,6 @@
 import React from 'react';
-import '../index.css';
-import '../styles/settings.css' // Make sure to update the path based on your project structure
+import '../../index.css';
+import '../../styles/settings.css' // Make sure to update the path based on your project structure
 
 const Settings = () => {
   return (

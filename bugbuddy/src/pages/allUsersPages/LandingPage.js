@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import '../index.css'
-import '../styles/landingPage.css'
+import '../../index.css'
+import '../../styles/landingPage.css'
+
+
 
 
 const LandingPage = () => {

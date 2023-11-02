@@ -3,14 +3,16 @@ import Prefetch from './features/auth/Prefetch';
 
 import Layout from './components/Layout';
 import Login from './components/Login';
-import LandingPage from './pages/LandingPage';
 import DashLayout from './components/DashLayout';
-import Dashboard from './pages/Dashboard';
 
-import Team from './pages/Team';
-import Settings from './pages/Settings';
-import MyProjects from './pages/MyProjects';
-import Profile from './pages/Profile';
+// pages visible to all kinds of users
+import LandingPage from './pages/allUsersPages/LandingPage';
+import Dashboard from './pages/allUsersPages/Dashboard';
+import Notifications from './components/Notifications';
+import Team from './pages/allUsersPages/Team';
+import Settings from './pages/allUsersPages/Settings';
+import MyProjects from './pages/allUsersPages/MyProjects';
+import Profile from './pages/allUsersPages/Profile';
 
 
 import EditUser from './features/users/EditUser';
@@ -33,6 +35,8 @@ function App() {
           <Route path="dashboard" element={<DashLayout />}>
 
             <Route index element={<Dashboard />} />
+
+            <Route path="notifications" element={<Notifications/>}/>
 
             <Route path="myProjects">
               <Route index element={<MyProjects />} />

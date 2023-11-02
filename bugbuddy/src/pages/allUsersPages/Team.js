@@ -1,7 +1,7 @@
 import React from 'react'
-import UsersList from '../features/users/UsersList'
-import TeamsList from '../features/teams/TeamsList'
-import '../index.css'
+import UsersList from '../../features/users/UsersList'
+import TeamsList from '../../features/teams/TeamsList'
+import '../../index.css'
 
 const Team = () => {
   return (
