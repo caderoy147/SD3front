@@ -11,7 +11,7 @@ import Dashboard from './pages/allUsersPages/Dashboard';
 import Notifications from './components/Notifications';
 import Team from './pages/allUsersPages/Team';
 import Settings from './pages/allUsersPages/Settings';
-import MyProjects from './pages/allUsersPages/MyProjects';
+import MyProjects from './pages/allUsersPages/BugWorkspace';
 import Profile from './pages/allUsersPages/Profile';
 
 
@@ -19,6 +19,22 @@ import EditUser from './features/users/EditUser';
 import NewUserForm from './features/users/NewUserForm';
 import EditBug from './features/bugs/EditBug';
 import NewBug from './features/bugs/NewBug';
+
+
+//pages for dev
+
+//pages for manager
+
+//pages for qa
+import QAacceptOrDeny from './pages/qaPages/QAacceptOrDeny';
+import QAdenyform from './pages/qaPages/QAdenyform';
+import QAinsideBugStatus from './pages/qaPages/QAinsideBugStatus';
+import QAinsideBugWorkspace from './pages/qaPages/QAinsideBugWorkspace'
+
+//pagees for dev and qa
+
+
+
 
 
 function App() {
@@ -64,6 +80,55 @@ function App() {
             <Route path="profile">
               <Route index element={<Profile />} />
             </Route>
+
+
+
+
+            {/* temporary views QA*/}
+            <Route path="QAacceptOrDeny">
+              <Route index element={<QAacceptOrDeny />} />
+            </Route>
+
+            <Route path="QAdenyform">
+              <Route index element={<QAdenyform />} />
+            </Route>
+
+            <Route path="QAinsideBugStatus">
+              <Route index element={<QAinsideBugStatus />} />
+            </Route>
+          
+            <Route path="QAinsideBugWorkspace">
+              <Route index element={<QAinsideBugWorkspace />} />
+            </Route>
+
+
+
+            {/* temporary views DEV*/}
+            <Route path="QAacceptOrDeny">
+              <Route index element={<QAacceptOrDeny />} />
+            </Route>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </Route>{/* End Dash */}
 

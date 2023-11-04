@@ -8,10 +8,10 @@ const MyProjects = () => {
 			<div>
 				<div class="head-title">
 				<div class="left">
-					<h1>My Projects</h1>
+					<h1>Bug Workspace</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">My Projects</a>
+							<a href="#">Bug Workspaces</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
@@ -19,36 +19,28 @@ const MyProjects = () => {
 						</li>
 					</ul>
 				</div>
+
 				<a href="#" class="btn-download">
 					<i class='bx bxs-cloud-download' ></i>
 					<span class="text">Create Project</span>
 				</a>
+				
 			</div>
 			
-				<div className="box-info">
+
+				{/* <div className="box-info"> //this program is compoenent aaa another box to add mulitplecomponents
 						
 					<div className="table-data">
 						<div className="order">
-							<div className="head">
-								<h3>Recent Projects</h3>
-								<i className='bx bx-search' ></i>
-								<i className='bx bx-filter' ></i>
-							</div>
-							<table>
-								<thead>
-									<tr>
-									</tr>
-								</thead>
-								<tbody>
-									<BugsList/>
-								</tbody>
-							</table>
+							 <BugsList/>
 						</div>
-
-
 					</div>
 
-				</div>
+				</div> */}
+
+
+
+
 			</div>
   )
 }
