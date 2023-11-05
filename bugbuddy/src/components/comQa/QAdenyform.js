@@ -1,10 +1,14 @@
 import React from 'react'
 import '../../styles/QAstyles/QAdenyform.css'
 
-const QAdenyform = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
+
+const QAdenyform = ({onClose}) => {
   return (
   <div>
     <div class="container">
+     <div class="QAcloseDenyForm"><FontAwesomeIcon icon={faCircleXmark} onClick={onClose}/></div>
       <div class="title">Message:</div>
         <div class="content">
           <form action="#">
@@ -29,7 +33,12 @@ const QAdenyform = () => {
             <button>Confirm Deny</button>
           </div>
         </div> 
+        
 
+
+          
+
+        
         </div>
 
 

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
-import Notifications from '../Notifications';
+
 import YourParentComponent from '../yourParentComponent';
 import { Link } from 'react-router-dom';
 import '../../styles/dashboard.css';
 import '../../index.css'
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from "@fortawesome/free-solid-svg-icons"
+import { faBell } from "@fortawesome/free-solid-svg-icons"
 
 const Layout2 = ({ toggleSidebar }) => {
   const [isSearchFormVisible, setIsSearchFormVisible] = useState(false);
@@ -100,14 +105,14 @@ const Layout2 = ({ toggleSidebar }) => {
           </form>
           <input type="checkbox" id="switch-mode" hidden />
           <label htmlFor="switch-mode" className="switch-mode" onClick={toggleDarkMode}></label>
+          
           <div to="/dashboard/notifications" className="notification" onClick={toggleNotificationModal}>
-            <i className='bx bxs-bell'></i>
+            <FontAwesomeIcon icon={faBell} />
             <span className="num">8</span>
           </div>
           
           <Link to="/dashboard/profile">
-            <i className='bx bxs-cog'></i>
-            <span className="text">Profile</span>
+             <FontAwesomeIcon icon={faUser} />
           </Link>
         </nav>
 
@@ -123,6 +128,9 @@ const Layout2 = ({ toggleSidebar }) => {
       </Modal>
       </section>
       {/* NAVBAR */}
+
+
+
 
       {/* SIDEBAR */}
       <section id="sidebar" className={isSidebarHidden ? 'hide' : ''}>

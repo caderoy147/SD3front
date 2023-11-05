@@ -1,5 +1,9 @@
 import React from 'react'
 import '../../styles/QAstyles/QAinsidebugworkspace.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBug } from "@fortawesome/free-solid-svg-icons"
+
+import QAinsideBugWorkspaceList from '../../components/comQa/QAinsideBugWorkspaceList'
 
 const QAinsideBugWorkspace = () => {
   return (
@@ -19,7 +23,7 @@ const QAinsideBugWorkspace = () => {
 				</div>
 				<div class="right">
 					<button>View Members</button>
-					<button>Report a Bug</button>
+					<button>Report a Bug  <FontAwesomeIcon icon={faBug} /></button>
 				</div>
 			</div>
 
@@ -29,54 +33,7 @@ const QAinsideBugWorkspace = () => {
 					<div class="head">
 						<h3>Parking System</h3>
 					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Bug Name</th>
-								<th>Date Assigned</th>
-								<th>Severity</th>
-								<th>Status</th>
-								<th>Developer Assignee</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><p>auth stat bug</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>Critical</p></td>
-								<td><p>Active</p></td>
-								<td><p>Enjambre</p></td>
-							</tr>
-							<tr>
-								<td><p>null exception</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>Low</p></td>
-								<td><p>Active</p></td>
-								<td><p>Salas</p></td>
-							</tr>
-							<tr>
-								<td><p>database spike</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>High</p></td>
-								<td><p>Active</p></td>
-								<td><p>Fernandez</p></td>
-							</tr>
-							<tr>
-								<td><p>css bugs</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>Medium</p></td>
-								<td><p>Inactive</p></td>
-								<td><p>Sanchez</p></td>
-							</tr>
-							<tr>
-								<td><p>null exception</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>Low</p></td>
-								<td><p>Inactive</p></td>
-								<td><p>Gantuangco</p></td>
-							</tr>
-						</tbody>
-					</table>
+					<QAinsideBugWorkspaceList/>
 				</div>
 				
 			</div>
