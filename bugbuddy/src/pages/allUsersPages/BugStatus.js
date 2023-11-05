@@ -3,7 +3,7 @@ import UsersList from '../../features/users/UsersList'
 import TeamsList from '../../features/teams/TeamsList'
 import '../../index.css'
 
-const Team = () => {
+const BugStatus= () => {
   return (
         <div className="box-info">
          <div className="table-data">
@@ -14,4 +14,4 @@ const Team = () => {
   )
 }
 
-export default Team
+export default BugStatus

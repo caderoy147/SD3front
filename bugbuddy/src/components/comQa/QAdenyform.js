@@ -7,7 +7,7 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 const QAdenyform = ({onClose}) => {
   return (
   <div>
-    <div class="container">
+    <div class="QAcontainer">
      <div class="QAcloseDenyForm"><FontAwesomeIcon icon={faCircleXmark} onClick={onClose}/></div>
       <div class="title">Message:</div>
         <div class="content">

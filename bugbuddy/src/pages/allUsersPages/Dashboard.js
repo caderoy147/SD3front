@@ -2,19 +2,12 @@ import React , { useState } from 'react'
 import Todo from '../../components/ComInDashBoard/Todo'
 import ProjectStats from '../../components/ComInDashBoard/ProjectStats'
 import RecentProjects from '../../components/ComInDashBoard/RecentProjects'
-import BugReport from '../../components/comDev/BugReport'; // Import BugReport component
 import '../../index.css'
 import '../../styles/dashboard.css'
 
 
 const Dashboard = () => {
-  // Define a state variable to track the visibility of the BugReport component
-  const [bugReportVisible, setBugReportVisible] = useState(false);
 
-  // Function to toggle the visibility of the BugReport component
-  const toggleBugReport = () => {
-    setBugReportVisible(!bugReportVisible);
-  };
 
 
   return (
@@ -32,21 +25,14 @@ const Dashboard = () => {
                 </li>
               </ul>
             </div>
-            <a className="btn-download" onClick={toggleBugReport}>
-              <i className='bx bxs-cloud-download' ></i>
-              <span className="text">Report a Bug</span>
-            </a>
           </div>
-      {!bugReportVisible && (
+
       <ProjectStats />
-      )}
-      {!bugReportVisible && (
         <div className="sameBoxTodoRp">
           <RecentProjects />
           <Todo />
         </div>
-      )}
-      {bugReportVisible && <BugReport />}
+      
     </div>
   )
 }

@@ -485,10 +485,10 @@
 
 	#content {
 		width: calc(100% - 60px);
-		left: 200px;
+		left: 50px;
 	}
 
-	#content nav .nav-link {
+	#content nav .bx.bx-menu {
 		display: none;
 	}
 }

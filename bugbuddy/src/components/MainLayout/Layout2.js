@@ -74,8 +74,8 @@ const Layout2 = ({ toggleSidebar }) => {
 
   const menuItems = [
     { icon: 'bx bxs-dashboard', text: 'Dashboard', to: '/dashboard' },
-    { icon: 'bx bxs-shopping-bag-alt', text: 'Bug Workspace', to: '/dashboard/myProjects' },
-    { icon: 'bx bxs-group', text: 'Bug Status', to: '/dashboard/team' },
+    { icon: 'bx bxs-shopping-bag-alt', text: 'Bug Workspace', to: '/dashboard/bugWorkSpace' },
+    { icon: 'bx bxs-group', text: 'Bug Status', to: '/dashboard/bugStatus' },
   ];
   const handleMenuClick = () => {
     toggleSidebar();

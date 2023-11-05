@@ -1,9 +1,8 @@
 import React from 'react'
 import '../../index.css'
 
-import BugsList from '../../features/bugs/BugsList'
 
-const MyProjects = () => {
+const BugWorkspace = () => {
   return (
 			<div>
 				<div class="head-title">
@@ -26,23 +25,9 @@ const MyProjects = () => {
 				</a>
 				
 			</div>
-			
-
-				{/* <div className="box-info"> //this program is compoenent aaa another box to add mulitplecomponents
-						
-					<div className="table-data">
-						<div className="order">
-							 <BugsList/>
-						</div>
-					</div>
-
-				</div> */}
-
-
-
 
 			</div>
   )
 }
 
-export default MyProjects
+export default BugWorkspace

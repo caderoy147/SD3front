@@ -9,7 +9,7 @@ import DashLayout from './components/DashLayout';
 import LandingPage from './pages/allUsersPages/LandingPage';
 import Dashboard from './pages/allUsersPages/Dashboard';
 import Notifications from './components/Notifications';
-import Team from './pages/allUsersPages/Team';
+import BugStatus from './pages/allUsersPages/BugStatus';
 import Settings from './pages/allUsersPages/Settings';
 import MyProjects from './pages/allUsersPages/BugWorkspace';
 import Profile from './pages/allUsersPages/Profile';
@@ -53,20 +53,20 @@ function App() {
 
             <Route path="notifications" element={<Notifications/>}/>
 
-            <Route path="myProjects">
+            <Route path="bugWorkSpace">
               <Route index element={<MyProjects />} />
               <Route path=":id" element={<EditBug/>} />
               <Route path="new" element={<NewBug/>} />
             </Route>
 
-            <Route path="team">
-              <Route index element={<Team />} />
+            <Route path="bugStatus">
+              <Route index element={<BugStatus />} />
               <Route path=":id" element={<EditUser/>} />
               <Route path="new" element={<NewUserForm/>} />
             </Route>
 
             <Route path="user">
-              <Route index element={<Team />} />
+              <Route index element={<BugStatus />} />
               <Route path=":id" element={<EditUser/>} />
               <Route path="new" element={<NewUserForm/>} />
             </Route>
