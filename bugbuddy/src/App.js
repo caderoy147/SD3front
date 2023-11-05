@@ -27,7 +27,6 @@ import NewBug from './features/bugs/NewBug';
 
 //pages for qa
 import QAacceptOrDeny from './pages/qaPages/QAacceptOrDeny';
-import QAdenyform from './pages/qaPages/QAdenyform';
 import QAinsideBugStatus from './pages/qaPages/QAinsideBugStatus';
 import QAinsideBugWorkspace from './pages/qaPages/QAinsideBugWorkspace'
 
@@ -87,10 +86,6 @@ function App() {
             {/* temporary views QA*/}
             <Route path="QAacceptOrDeny">
               <Route index element={<QAacceptOrDeny />} />
-            </Route>
-
-            <Route path="QAdenyform">
-              <Route index element={<QAdenyform />} />
             </Route>
 
             <Route path="QAinsideBugStatus">

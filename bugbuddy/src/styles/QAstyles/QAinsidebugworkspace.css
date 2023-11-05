@@ -1,0 +1,12 @@
+.QA button {
+	color: white;
+	padding: 7px 25px;
+	border: 0px;
+	border-radius: 20px;
+	background: #3C91E6;
+}
+
+.QA button:hover {
+	cursor: pointer;
+}
+

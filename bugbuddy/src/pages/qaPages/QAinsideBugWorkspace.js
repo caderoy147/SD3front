@@ -1,12 +1,9 @@
 import React from 'react'
-
+import '../../styles/QAstyles/QAinsidebugworkspace.css'
 
 const QAinsideBugWorkspace = () => {
   return (
-    <div>
-
-<section id="content">
-		<main>
+		<div className="QA">
 			<div class="head-title">
 				<div class="left">
 					<h1>Parking System</h1>
@@ -83,11 +80,6 @@ const QAinsideBugWorkspace = () => {
 				</div>
 				
 			</div>
-		</main>
-
-	</section>
-
-	
 
 
     </div>

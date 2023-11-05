@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../../styles/QAstyles/QAdenyform.css'
 
 const QAdenyform = () => {
   return (
@@ -16,20 +16,23 @@ const QAdenyform = () => {
           </div>
 
           <p id="proof-text">Proof:  
-          <input type="file" id="fileInput" name="image" style="display: none;"/>
+          <input type="file" id="fileInput" name="image"/>
           <button id="uploadButton" type="button">Attach Image</button>
           </p>
 
           </form>
         </div>
 
-        </div>
 
         <div class="bot">
           <div class="custom-button">
             <button>Confirm Deny</button>
           </div>
         </div> 
+
+        </div>
+
+
       </div>    
   )
 }

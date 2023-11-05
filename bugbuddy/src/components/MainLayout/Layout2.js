@@ -61,6 +61,12 @@ const Layout2 = ({ toggleSidebar }) => {
     document.body.classList.toggle('dark');
   };
 
+  const toggleNotificationModal = () => {
+    setIsNotificationModalOpen(!isNotificationModalOpen);
+  };
+
+
+
   const menuItems = [
     { icon: 'bx bxs-dashboard', text: 'Dashboard', to: '/dashboard' },
     { icon: 'bx bxs-shopping-bag-alt', text: 'Bug Workspace', to: '/dashboard/myProjects' },
@@ -94,7 +100,7 @@ const Layout2 = ({ toggleSidebar }) => {
           </form>
           <input type="checkbox" id="switch-mode" hidden />
           <label htmlFor="switch-mode" className="switch-mode" onClick={toggleDarkMode}></label>
-          <div to="/dashboard/notifications" className="notification" onClick={openNotificationModal}>
+          <div to="/dashboard/notifications" className="notification" onClick={toggleNotificationModal}>
             <i className='bx bxs-bell'></i>
             <span className="num">8</span>
           </div>

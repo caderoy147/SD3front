@@ -4,8 +4,6 @@ import '../../styles/profile.css'
 
 const Profile = () => {
   return (
-    <div>
-      <div class="content">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -170,8 +168,6 @@ const Profile = () => {
             </div>
         
         </div>
-      </div>
-    </div>
   );
 }
 
