@@ -17,8 +17,11 @@ import Profile from './pages/allUsersPages/Profile';
 
 import EditUser from './features/users/EditUser';
 import NewUserForm from './features/users/NewUserForm';
+
+
 import EditBug from './features/bugs/EditBug';
 import NewBug from './features/bugs/NewBug';
+import NewBugForm from './features/bugs/NewBugForm';
 
 
 //pages for dev
@@ -70,6 +73,13 @@ function App() {
               <Route path=":id" element={<EditUser/>} />
               <Route path="new" element={<NewUserForm/>} />
             </Route>
+
+            <Route path="bug">
+              <Route index element={<BugStatus />} />
+              <Route path=":id" element={<EditBug/>} />
+              <Route path="new" element={<NewBugForm/>} />
+            </Route>
+
 
 
             <Route path="settings">
