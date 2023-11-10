@@ -10,6 +10,7 @@ import '../../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from "@fortawesome/free-solid-svg-icons"
 import { faBell } from "@fortawesome/free-solid-svg-icons"
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 const Layout2 = ({ toggleSidebar }) => {
   const [isSearchFormVisible, setIsSearchFormVisible] = useState(false);
@@ -108,7 +109,7 @@ const Layout2 = ({ toggleSidebar }) => {
           
           <div to="/dashboard/notifications" className="notification" onClick={toggleNotificationModal}>
             <FontAwesomeIcon icon={faBell} />
-            <span className="num">8</span>
+            <span className="num">4</span>
           </div>
           
           <Link to="/dashboard/profile">
@@ -123,7 +124,8 @@ const Layout2 = ({ toggleSidebar }) => {
         className="custom-modal" // Add a custom class
         overlayClassName="custom-overlay" // Add a custom overlay class
       >
-        <button onClick={closeNotificationModal}>Close Notifications</button>
+        <button  onClick={closeNotificationModal}>Close Notifications</button>
+    
         <YourParentComponent />
       </Modal>
       </section>

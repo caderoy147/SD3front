@@ -38,7 +38,7 @@ const NewTeamForm = () => {
             setTeamname('')
             setPassword('')
             setRoles([])
-            navigate('/dashboard/team')
+            navigate('/dashboard/bugStatus')
         }
     }, [isSuccess, navigate])
 

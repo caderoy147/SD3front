@@ -1,65 +1,67 @@
-import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { useAddNewBugMutation } from "./bugsApiSlice"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from "@fortawesome/free-solid-svg-icons"
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAddNewBugMutation } from "./bugsApiSlice";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSave } from "@fortawesome/free-solid-svg-icons";
 
 const NewBugForm = ({ users }) => {
-
+    console.log("Users prop:", users);
     const [addNewBug, {
         isLoading,
         isSuccess,
         isError,
         error
-    }] = useAddNewBugMutation()
+    }] = useAddNewBugMutation();
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const [title, setTitle] = useState('')
-    const [text, setText] = useState('')
-    const [userId, setUserId] = useState(users[0].id)
+    const [title, setTitle] = useState('');
+    const [text, setText] = useState('');
+    const [userId, setUserId] = useState(users && users.length > 0 ? users[0].id : '');
 
     useEffect(() => {
         if (isSuccess) {
-            setTitle('')
-            setText('')
-            setUserId('')
-            navigate('/dashboard/team')
+            setTitle('');
+            setText('');
+            setUserId('');
+            navigate('/dashboard/team');
         }
-    }, [isSuccess, navigate])
+    }, [isSuccess, navigate]);
 
-    const onTitleChanged = e => setTitle(e.target.value)
-    const onTextChanged = e => setText(e.target.value)
-    const onUserIdChanged = e => setUserId(e.target.value)
+    const onTitleChanged = e => setTitle(e.target.value);
+    const onTextChanged = e => setText(e.target.value);
+    const onUserIdChanged = e => setUserId(e.target.value);
 
-    const canSave = [title, text, userId].every(Boolean) && !isLoading
+    const canSave = [title, text, userId].every(Boolean) && !isLoading;
 
     const onSaveBugClicked = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         if (canSave) {
-            await addNewBug({ user: userId, title, text })
+            await addNewBug({ user: userId, title, text });
         }
     }
 
-    const options = users.map(user => {
-        return (
-            <option
-                key={user.id}
-                value={user.id}
-            > {user.username}</option >
-        )
-    })
+    const options = users && users.length > 0
+        ? users.map(user => (
+            <option key={user.id} value={user.id}>
+                {user.username}
+            </option>
+        ))
+        : null;
 
-    const errClass = isError ? "errmsg" : "offscreen"
-    const validTitleClass = !title ? "form__input--incomplete" : ''
-    const validTextClass = !text ? "form__input--incomplete" : ''
+    const errClass = isError ? "errmsg" : "offscreen";
+    const validTitleClass = !title ? "form__input--incomplete" : '';
+    const validTextClass = !text ? "form__input--incomplete" : '';
 
     const content = (
         <>
-            <p className={errClass}>{error?.data?.message}</p>
-
-            <form className="form" onSubmit={onSaveBugClicked}>
-                <div className="form__title-row">
+            {users === undefined && <p>Loading users...</p>}
+            {users !== undefined && users.length === 0 && <p>No users available.</p>}
+            {users !== undefined && users.length > 0 && (
+                <>
+                    <p className={errClass}>{error?.data?.message}</p>
+                    <form className="form" onSubmit={onSaveBugClicked}>
+                        <div className="form__title-row">
                     <h2>New Bug</h2>
                     <div className="form__action-buttons">
                         <button
@@ -105,11 +107,13 @@ const NewBugForm = ({ users }) => {
                     {options}
                 </select>
 
-            </form>
+                    </form>
+                </>
+            )}
         </>
-    )
+    );
 
-    return content
+    return content;
 }
 
-export default NewBugForm
+export default NewBugForm;

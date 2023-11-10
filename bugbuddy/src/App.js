@@ -77,7 +77,7 @@ function App() {
             <Route path="bug">
               <Route index element={<BugStatus />} />
               <Route path=":id" element={<EditBug/>} />
-              <Route path="new" element={<NewBugForm/>} />
+              <Route path="new" element={<NewBug/>} />
             </Route>
 
 
