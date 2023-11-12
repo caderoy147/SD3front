@@ -1,11 +1,8 @@
 import React from 'react'
 
-const devQAinisideTheBug = () => {
+const DevQAInisideTheBug = () => {
   return (
     <div>
-	<section id="content">
-
-		<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>auth state bug</h1>
@@ -69,12 +66,8 @@ const devQAinisideTheBug = () => {
                 <button class="update-post">Post</button>
 			</div>
 
-		</main>
-
-	</section>
-
     </div>
   )
 }
 
-export default devQAinisideTheBug
+export default DevQAInisideTheBug

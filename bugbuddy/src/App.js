@@ -21,7 +21,7 @@ import NewUserForm from './features/users/NewUserForm';
 
 import EditBug from './features/bugs/EditBug';
 import NewBug from './features/bugs/NewBug';
-import NewBugForm from './features/bugs/NewBugForm';
+
 
 
 //pages for dev
@@ -45,8 +45,11 @@ import QAacceptOrDeny from './pages/qaPages/QAacceptOrDeny';
 import QAinsideBugStatus from './pages/qaPages/QAinsideBugStatus';
 import QAinsideBugWorkspace from './pages/qaPages/QAinsideBugWorkspace'
 
-//pagees for dev and qa
 
+//pagees for dev and qa
+import DevQABugWorkspace from './pages/devAndQaPages/DevQABugWorkspace'
+import DevQABugWorkSpaceNone from './pages/devAndQaPages/DevQABugWorkSpaceNone'
+import DevQAInisideTheBug from './pages/devAndQaPages/DevQAInisideTheBug'
 
 
 
@@ -103,7 +106,7 @@ function App() {
             </Route>
 
 
-
+            
 
             {/* temporary views QA*/}
             <Route path="QAacceptOrDeny">
@@ -158,6 +161,20 @@ function App() {
               <Route index element={<ManInsideTheBug />} />
             </Route>
 
+
+
+
+
+            {/* temporary views DEV and QA*/}
+            <Route path="DevQABugWorkspace">
+              <Route index element={<DevQABugWorkspace/>} />
+            </Route>
+            <Route path="DevQABugWorkSpaceNone">
+              <Route index element={<DevQABugWorkSpaceNone/>} />
+            </Route>
+            <Route path="DevQAInisideTheBug">
+              <Route index element={<DevQAInisideTheBug/>} />
+            </Route>
 
 
 

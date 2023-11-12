@@ -1,12 +1,8 @@
 import React from 'react'
 
-const devQAbugworkspace = () => {
+const DevQABugWorkspace = () => {
   return (
     <div>
-
-	<section id="content">
-
-		<main>
 			<div class="head-title">
 				<div class="left">
 						<h1>Bug Workspace</h1>
@@ -61,15 +57,9 @@ const devQAbugworkspace = () => {
 				</div>
 				
 			</div>
-		</main>
-
-	</section>
-
-	
-
 
     </div>
   )
 }
 
-export default devQAbugworkspace
+export default DevQABugWorkspace

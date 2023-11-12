@@ -1,12 +1,8 @@
 import React from 'react'
 
-const devQAbugworkspaceNone = () => {
+const DevQABugWorkSpaceNone = () => {
   return (
     <div>
-      
-    <section id="content">
-
-        <main>
             <div class="head-title">
                 <div class="left">
                     <h1>Bug Workspace</h1>
@@ -23,12 +19,10 @@ const devQAbugworkspaceNone = () => {
                     <h2>NO BUG WORKSPACE YET...</h2>
                 </div>
             </div>
-		</main>
-	</section>
 
 
     </div>
   )
 }
 
-export default devQAbugworkspaceNone
+export default DevQABugWorkSpaceNone

@@ -43,11 +43,11 @@ const DEVfixbug = () => {
 				</div>
 				<div class="table-data-DEVfixbug">
 					<h1>Proof</h1>
-					<button class="attach-image">Attach Image</button>
+					<button class="DEVfixbug">Attach Image</button>
 				</div>
 				<div class="table-data-DEVfixbug">
-					<button>Submit to QA</button>
-					<button>Exit</button>
+					<button className="DEVfixbug">Submit to QA</button>
+					<button className="DEVfixbug">Exit</button>
 				</div>
 			</div>	
     </div>
