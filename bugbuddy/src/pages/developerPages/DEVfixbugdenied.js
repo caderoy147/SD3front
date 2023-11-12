@@ -1,12 +1,9 @@
 import React from 'react'
+import '../../styles/DEVstyles/DEVfixbugdenied.css'
 
 const DEVfixbugdenied = () => {
   return (
     <div>
-
-	<section id="content">
-
-		<main>
 			<div class="head-title">
 				<div class="left">
 						<h1>null exception</h1>
@@ -24,35 +21,28 @@ const DEVfixbugdenied = () => {
 							</li>
 						</ul>
 				</div>	
-				<div class="display-text">
+				<div class="display-text-DEVfixbugdenied">
 					<h1>Progress:</h1>
 					<p>Denied</p>
 				</div>
 			</div>
 
-			<div class="table-data-container">
-				<div class="table-data-container-2">
-					<div class="table-data">
+			<div class="table-data-container-DEVfixbugdenied">
+				<div class="table-data-container-2-DEVfixbugdenied">
+					<div class="table-data-DEVfixbugdenied">
 						<h1>Message</h1>
 						<p>IMG:</p>
 						<p>Explanation:</p>
 						<p>Because all the font bad, auth will not work. I replicated it</p>
 					</div>
-					<div class="table-data">
+					<div class="table-data-DEVfixbugdenied">
 						<h1>Img:</h1>
 					</div>
 				</div>
-				<div class="fix">
-					<button class="fix-button">FIX</button>
+				<div class="fix-DEVfixbugdenied">
+					<button class="fix-button-DEVfixbugdenied">FIX</button>
 				</div>
 			</div>	
-		</main>
-
-	</section>
-
-	
-
-
     </div>
   )
 }

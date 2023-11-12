@@ -46,7 +46,7 @@ const EditTeamForm = ({ team }) => {
             setTeamname('')
             setPassword('')
             setRoles([])
-            navigate('/dashboard/bugStatus')
+            navigate('/dashboard/team')
         }
 
     }, [isSuccess, isDelSuccess, navigate])

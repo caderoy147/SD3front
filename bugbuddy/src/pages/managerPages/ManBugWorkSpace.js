@@ -1,11 +1,9 @@
 import React from 'react'
+import '../../styles/MANstyles/ManBugWorkSpace.css'
 
 const ManBugWorkSpace = () => {
   return (
     <div>
-   
-	<section id="content">
-		<main>
 			<div class="head-title">
 				<div class="left">
 						<h1>Bug Workspace</h1>
@@ -61,12 +59,6 @@ const ManBugWorkSpace = () => {
 				</div>
 				
 			</div>
-		</main>
-
-	</section>
-
-
-
     </div>
   )
 }

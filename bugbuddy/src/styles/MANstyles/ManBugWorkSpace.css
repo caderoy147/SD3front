@@ -1,0 +1,13 @@
+
+#content main .head-title button{
+	color: white;
+	font-family: var(--poppins);
+	padding: 10px;
+	background-color: #3C91E6;
+	border-radius: 10px;
+	border: 0px;
+	margin: 10px;
+}
+#content main .head-title button:hover{
+	cursor: pointer;
+}

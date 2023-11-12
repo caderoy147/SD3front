@@ -1,12 +1,9 @@
 import React from 'react'
+import '../../styles/MANstyles/ManInsideBugStatus.css'
 
 const ManInsideBugStatus = () => {
   return (
     <div>
-
-	<section id="content">
-		
-		<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>Parking System</h1>
@@ -44,44 +41,42 @@ const ManInsideBugStatus = () => {
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
 								<td><p>Ongoing</p></td>
-								<td><button>Mark as Done</button></td>
+								<td><button className="ManagerInBugBtn">Mark as Done</button></td>
 							</tr>
 							<tr>
 								<td><p>null exception</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
 								<td><p>Accepted</p></td>
-								<td><button>Mark as Done</button></td>
+								<td><button className="ManagerInBugBtn">Mark as Done</button></td>
 							</tr>
 							<tr>
 								<td><p>database spike</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
 								<td><p>Ongoing</p></td>
-								<td><button>Mark as Done</button></td>
+								<td><button className="ManagerInBugBtn">Mark as Done</button></td>
 							</tr>
 							<tr>
 								<td><p>css bugs</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
 								<td><p>Ongoing</p></td>
-								<td><button>Mark as Done</button></td>
+								<td><button className="ManagerInBugBtn">Mark as Done</button></td>
 							</tr>
 							<tr>
 								<td><p>null exception</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
 								<td><p>Ongoing</p></td>
-								<td><button>Mark as Done</button></td>
+								<td><button className="ManagerInBugBtn">Mark as Done</button></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 				
 			</div>
-		</main>
 
-	</section>
 
 	
 

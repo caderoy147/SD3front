@@ -25,8 +25,20 @@ import NewBugForm from './features/bugs/NewBugForm';
 
 
 //pages for dev
+import DEVfixbug from './pages/developerPages/DEVfixbug'
+import DEVfixbugdenied from './pages/developerPages/DEVfixbugdenied'
+import DEVinisdebugstatus from './pages/developerPages/DEVinisdebugstatus'
+
 
 //pages for manager
+import ManBugWorkSpace from './pages/managerPages/ManBugWorkSpace'
+import ManBugWorkSpaceEmpty  from './pages/managerPages/ManBugWorkSpaceEmpty'
+import ManInsideBugStatus from './pages/managerPages/ManInsideBugStatus'
+import ManInsideBugStatusFinished from './pages/managerPages/ManInsideBugStatusFinished'
+import ManInsideBugWorkSpace from './pages/managerPages/ManInsideBugWorkSpace'
+import ManInsideTheBug from './pages/managerPages/ManInsideTheBug'
+
+
 
 //pages for qa
 import QAacceptOrDeny from './pages/qaPages/QAacceptOrDeny';
@@ -109,10 +121,42 @@ function App() {
 
 
             {/* temporary views DEV*/}
-            <Route path="QAacceptOrDeny">
-              <Route index element={<QAacceptOrDeny />} />
+            <Route path="DEVfixbug">
+              <Route index element={<DEVfixbug />} />
+            </Route>
+            <Route path="DEVfixbugdenied">
+              <Route index element={<DEVfixbugdenied />} />
+            </Route>
+            <Route path="DEVinisdebugstatus">
+              <Route index element={<DEVinisdebugstatus />} />
             </Route>
 
+
+
+
+            {/* temporary views Manager*/}
+            <Route path="ManBugWorkSpace">
+              <Route index element={<ManBugWorkSpace />} />
+            </Route>
+            <Route path="ManBugWorkSpaceEmpty">
+              <Route index element={<ManBugWorkSpaceEmpty />} />
+            </Route>
+
+            <Route path="ManInsideBugStatus">
+              <Route index element={<ManInsideBugStatus />} />
+            </Route>
+
+            <Route path="ManInsideBugStatusFinished">
+              <Route index element={<ManInsideBugStatusFinished />} />
+            </Route>
+
+            <Route path="ManInsideBugWorkSpace">
+              <Route index element={<ManInsideBugWorkSpace />} />
+            </Route>
+
+            <Route path="ManInsideTheBug">
+              <Route index element={<ManInsideTheBug />} />
+            </Route>
 
 
 

@@ -1,11 +1,9 @@
 import React from 'react'
+import '../../styles/MANstyles/ManInsideBugStatus.css'
 
 const ManInsideBugStatusFinished = () => {
   return (
     <div>
-
-	<section id="content">
-		<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>null exception</h1>
@@ -41,7 +39,7 @@ const ManInsideBugStatusFinished = () => {
 								<td><p>Angelo Jhann Salas</p></td>
 								<td><p>Developer</p></td>
 								<td><p>Ongoing</p></td>
-								<td><button>View</button></td>
+								<td><button className="ManStatsFinishedBtn">View</button></td>
 							</tr>
 							
 						</tbody>
@@ -49,11 +47,6 @@ const ManInsideBugStatusFinished = () => {
 				</div>
 				
 			</div>
-		</main>
-	
-	</section>
-
-
 
     </div>
   )

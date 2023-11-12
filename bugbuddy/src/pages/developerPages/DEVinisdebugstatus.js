@@ -1,11 +1,9 @@
 import React from 'react'
+import '../../styles/DEVstyles/DEVprojectstatus.css'
 
 const DEVinisdebugstatus = () => {
   return (
     <div>
-	<section id="content">
-
-		<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>Parking System</h1>
@@ -42,35 +40,35 @@ const DEVinisdebugstatus = () => {
 								<td><p>null exception</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
-								<td><button class="green-button">View</button></td>
+								<td><button class="green-button-DEVprojectstatus">View</button></td>
 								<td><p>Accepted</p></td>
 							</tr>
 							<tr>
 								<td><p>database spike</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
-								<td><button class="red-button">Review</button></td>
+								<td><button class="red-button-DEVprojectstatus">Review</button></td>
 								<td><p>Denied</p></td>
 							</tr>
 							<tr>
 								<td><p>auth stat bug</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
-								<td><button>Fix</button></td>
+								<td><button className="DEVprojectstatus">Fix</button></td>
 								<td><p>In Progress</p></td>
 							</tr>
 							<tr>
 								<td><p>css bugs</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
-								<td><button class="green-button">View</button></td>
+								<td><button class="green-button-DEVprojectstatus">View</button></td>
 								<td><p>In Progress</p></td>
 							</tr>
 							<tr>
 								<td><p>null exception</p></td>
 								<td><p>9-01-2023</p></td>
 								<td><p>9-23-2023</p></td>
-								<td><button class="green-button">View</button></td>
+								<td><button class="green-button-DEVprojectstatus">View</button></td>
 								<td><p>In Progress</p></td>
 							</tr>
 						</tbody>
@@ -78,11 +76,6 @@ const DEVinisdebugstatus = () => {
 				</div>
 				
 			</div>
-		</main>
-
-	</section>
-
-
     </div>
   )
 }

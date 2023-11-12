@@ -1,0 +1,94 @@
+
+#content main .update {
+	display: flex;
+    flex-direction: column;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	background: var(--light);
+	border-radius: 20px;
+    height: auto;
+	justify-content: center;
+	align-items: center;
+}
+#content main .update > div {
+	border-radius: 20px;
+	padding: 24px;
+}
+#content main .update .chat-updates {
+    display: flex;
+	flex-grow: 1;
+    flex-direction: row;
+    
+}
+#content main .update .chat-updates .chats-holder{
+    margin: 10px;
+    border-radius: 15px;
+    width:100%;
+    height: 200px;
+    background: var(--grey);
+}
+#content main .update .chat-updates .chats-holder .user-input-box{
+    padding-left: 60px;
+	padding-top: 20px;
+}
+#content main .update .input{
+	width: 1000px;
+	height: 30px;
+}
+#content main .update .chat-updates .chats-holder .reply{
+    margin-top: 90px;
+    background-color: var(--grey);
+    border-radius: 15px;
+    height: 40px;
+    padding-top: 8px;
+ }
+.gg-profile{
+    font-size: 50px;
+    display: inline-block;
+    margin: 10px; 
+    padding: 5px; 
+    border: 1px solid #ccc;
+}
+#content main .update .chat-updates .chats-holder h1{
+   padding: 30px;
+}
+#content main .update .chat-updates .chats-holder p{
+    padding-left: 60px;
+	padding-right: 30px;
+}
+#content main .update .start-conversation{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--grey);
+    margin-top: 50px;
+    margin-left: 70px;
+    margin-right: 32px;
+}
+#content main .update .update-post {
+    background-color: #0074d9; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 10px 20px; /* Padding around text (top/bottom, left/right) */
+    border: none; /* Remove default button border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Show hand cursor on hover */
+    margin-left: 70px;
+    margin-right: 32px;
+    margin-bottom: 40px;
+    width: 100px;
+}
+  
+  /* Hover effect */
+#content main .update.update-post{
+    background-color: #0056b3; /* Change background color on hover */
+}
+/* MAIN */
+/* CONTENT */
+
+
+
+
+
+

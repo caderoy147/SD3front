@@ -3,10 +3,6 @@ import React from 'react'
 const ManInsideBugWorkSpace = () => {
   return (
     <div>
-
-	<section id="content">
-
-		<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>Parking System</h1>
@@ -83,10 +79,6 @@ const ManInsideBugWorkSpace = () => {
 				</div>
 				
 			</div>
-		</main>
-
-	</section>
-
     </div>
   )
 }

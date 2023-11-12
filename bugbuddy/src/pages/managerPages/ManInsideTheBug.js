@@ -1,11 +1,9 @@
 import React from 'react'
+import '../../styles/MANstyles/ManInsideTheBug.css'
 
 const ManInsideTheBug = () => {
   return (
   <div>
-	<section id="content">
-
-		<main>
 			<div class="head-title">
 				<div class="left">
 					<h1>auth state bug</h1>
@@ -72,11 +70,6 @@ const ManInsideTheBug = () => {
 				</div>
                 <button class="update-post">Post</button>
 			</div>
-
-		</main>
-
-	</section>
-
     </div>
   )
 }
