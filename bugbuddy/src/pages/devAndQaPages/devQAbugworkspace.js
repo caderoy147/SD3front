@@ -1,6 +1,7 @@
 import React from 'react'
+import TeamsList from '../../features/teams/TeamsList'
 
-const DevQABugWorkspace = () => {
+const DevQABugWorkSpace = () => {
   return (
     <div>
 			<div class="head-title">
@@ -18,42 +19,7 @@ const DevQABugWorkspace = () => {
 
 			<div class="table-data">
 				<div class="order">
-					<table>
-						<thead>
-							<tr>
-								<th>Project Name</th>
-								<th>Date Assigned</th>
-								<th>Progress</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><p>Parking System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Bus Route System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Project Management System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Bus Tracking Tool</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-							<tr>
-								<td><p>Attendance Checker System</p></td>
-								<td><p>9-01-2023</p></td>
-								<td><p>50%</p></td>
-							</tr>
-						</tbody>
-					</table>
+							<TeamsList/>
 				</div>
 				
 			</div>
@@ -62,4 +28,4 @@ const DevQABugWorkspace = () => {
   )
 }
 
-export default DevQABugWorkspace
+export default DevQABugWorkSpace

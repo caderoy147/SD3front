@@ -2,6 +2,7 @@ import React from 'react'
 import UsersList from '../../features/users/UsersList'
 import TeamsList from '../../features/teams/TeamsList'
 import BugsList from '../../features/bugs/BugsList'
+import ProfilesList from '../../features/profile/ProfilesList'
 import '../../index.css'
 
 const BugStatus= () => {
@@ -11,6 +12,7 @@ const BugStatus= () => {
             <UsersList/>
             <TeamsList/>
             <BugsList/>
+            <ProfilesList/>
           </div>
         </div>
   )

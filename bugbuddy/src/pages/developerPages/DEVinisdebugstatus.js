@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../styles/DEVstyles/DEVprojectstatus.css'
+import DEVinsideBugStatusList from '../../components/comDev/DEVinsideBugStatusList'
 
 const DEVinisdebugstatus = () => {
   return (
@@ -71,6 +72,7 @@ const DEVinisdebugstatus = () => {
 								<td><button class="green-button-DEVprojectstatus">View</button></td>
 								<td><p>In Progress</p></td>
 							</tr>
+							<DEVinsideBugStatusList/>
 						</tbody>
 					</table>
 				</div>
