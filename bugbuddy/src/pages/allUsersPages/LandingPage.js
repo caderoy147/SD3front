@@ -41,7 +41,7 @@ const LandingPage = () => {
                   <a href="#testimonial" className="nav__menu__item">Testimonial</a>
                 </div>
                 <div className="nav__menu">
-                  <a href="#" className="nav__menu__item">Login</a>
+                  <a href="#" className="nav__menu__item"><Link to="/login">login</Link></a>
                   <a href="#" className="btn btn-blue">Signup</a>
                 </div>
               </div>

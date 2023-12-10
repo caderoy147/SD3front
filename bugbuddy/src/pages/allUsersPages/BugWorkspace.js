@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../index.css'
-
+import TeamsList from '../../features/teams/TeamsList'
 
 const BugWorkspace = () => {
   return (
@@ -25,6 +25,12 @@ const BugWorkspace = () => {
 				</a>
 				
 			</div>
+
+
+			<div>
+				<TeamsList/>
+			</div>
+
 
 			</div>
   )

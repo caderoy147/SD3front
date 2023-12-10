@@ -5,7 +5,9 @@ import NewBugForm from './NewBugForm'
 const NewBug = () => {
     const users = useSelector(selectAllUsers)
 
-    const content = users ? <NewBugForm users={users} /> : <p>Loading...</p>
+    if (!users?.length) return <p>Not Currently Available</p>
+
+    const content = <NewBugForm users={users} />
  
 
     return content

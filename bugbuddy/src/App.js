@@ -2,7 +2,7 @@ import {Routes,Route} from 'react-router-dom'
 import Prefetch from './features/auth/Prefetch';
 
 import Layout from './components/Layout';
-import Login from './components/Login';
+import Login from './features/auth/Login'
 import DashLayout from './components/DashLayout';
 
 // pages visible to all kinds of users

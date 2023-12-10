@@ -12,6 +12,8 @@ import { faUser } from "@fortawesome/free-solid-svg-icons"
 import { faBell } from "@fortawesome/free-solid-svg-icons"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
+import DashHeader from '../DashHeader'
+
 const Layout2 = ({ toggleSidebar }) => {
   const [isSearchFormVisible, setIsSearchFormVisible] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -85,6 +87,7 @@ const Layout2 = ({ toggleSidebar }) => {
 
   return (
     <div>
+      <DashHeader/>
       {/* NAVBAR */}
       <section id="content" className={contentClass} >
         <nav>

@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-import DashFooter from './DashFooter';
 import Layout2 from './MainLayout/Layout2';
 import '../index.css';
 import React, { useState, useEffect } from 'react';
@@ -17,6 +16,7 @@ const DashLayout = () => {
     <>
       <Layout2 toggleSidebar={toggleSidebar} />
       <section id="content" className={contentClass}>
+      
         <main>
           <Outlet />
         </main>
