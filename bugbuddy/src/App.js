@@ -51,8 +51,8 @@ import QAinsideBugWorkspace from './pages/qaPages/QAinsideBugWorkspace'
 
 
 //pagees for dev and qa
-import DevQABugWorkSpace from './pages/devAndQaPages/DevQABugWorkSpace'
-import DevQABugWorkSpaceNone from './pages/devAndQaPages/DevQABugWorkSpaceNone'
+import DevQASpaces from './pages/devAndQaPages/DevQASpaces';
+import DevQANone from './pages/devAndQaPages/DevQANone';
 import DevQAInisideTheBug from './pages/devAndQaPages/DevQAInisideTheBug'
 import BugWorkspace from './pages/allUsersPages/BugWorkspace';
 
@@ -178,11 +178,11 @@ function App() {
 
 
               {/* temporary views DEV and QA*/}
-              <Route path="DevQABugWorkSpace">
-                <Route index element={<DevQABugWorkSpace/>} />
+              <Route path="DevQASpaces">
+                <Route index element={<DevQASpaces/>} />
               </Route>
-              <Route path="DevQABugWorkSpaceNone">
-                <Route index element={<DevQABugWorkSpaceNone/>} />
+              <Route path="DevQANone">
+                <Route index element={<DevQANone/>} />
               </Route>
               <Route path="DevQAInisideTheBug">
                 <Route index element={<DevQAInisideTheBug/>} />

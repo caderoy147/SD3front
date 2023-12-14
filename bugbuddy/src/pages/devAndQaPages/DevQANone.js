@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DevQABugWorkSpaceNone = () => {
+const DevQANone = () => {
   return (
     <div>
             <div class="head-title">
@@ -25,4 +25,4 @@ const DevQABugWorkSpaceNone = () => {
   )
 }
 
-export default DevQABugWorkSpaceNone
+export default DevQANone

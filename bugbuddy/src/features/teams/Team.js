@@ -1,23 +1,26 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
-import { useNavigate } from 'react-router-dom'
-
-import { useSelector } from 'react-redux'
-import { selectTeamById } from './teamsApiSlice'
-
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectTeamById } from './teamsApiSlice';
+import useAuth from '../../hooks/useAuth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const Team = ({ teamId }) => {
-
-    const team = useSelector(state => selectTeamById(state, teamId))
-
-    const navigate = useNavigate()
+    const team = useSelector(state => selectTeamById(state, teamId));
+    const navigate = useNavigate();
+    const authUser = useAuth();
 
     if (team) {
-        const created = new Date(team.createdAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
+        const isUserOnTeam =
+            (team.qualityA && team.qualityA._id === authUser.id) ||
+            (team.developerList.some(developer => developer._id === authUser.id)) ||
+            (team.manager && team.manager._id === authUser.id);
 
-        const updated = new Date(team.updatedAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
-
-        const handleEdit = () => navigate(`/dash/teams/${teamId}`)
+        if (!isUserOnTeam) {
+            console.log('User is not on the team. Rendering null.');
+            return null;
+        }
 
         return (
             <tr className="table__row">
@@ -27,21 +30,33 @@ const Team = ({ teamId }) => {
                         : <span className="team__status--open">Open</span>
                     }
                 </td>
-                {/* <td className="table__cell team__created">{created}</td> */}
-                {/* <td className="table__cell team__updated">{updated}</td> */}
-                <td className="table__cell team__title">{team.teamname}</td>
-
+                <td className="table__cell team__title">
+                    {/* Make the team name clickable and redirect to QAinsideBugWorkspace */}
+                    <button
+                        className="team-link"
+                        onClick={() => {
+                            navigate('/dashboard/QAinsideBugWorkspace');
+                        }}
+                    >
+                        {team.teamname}
+                    </button>
+                </td>
                 <td className="table__cell">
                     <button
                         className="icon-button table__button"
-                        onClick={handleEdit}
+                        onClick={() => {
+                            // Handle other actions if needed
+                        }}
                     >
                         <FontAwesomeIcon icon={faPenToSquare} />
                     </button>
                 </td>
             </tr>
-        )
+        );
+    } else {
+        console.log('Team is null. Rendering null.');
+        return null;
+    }
+};
 
-    } else return null
-}
-export default Team
+export default Team;

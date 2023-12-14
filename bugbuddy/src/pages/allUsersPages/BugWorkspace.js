@@ -4,7 +4,9 @@ import '../../index.css';
 
 import useAuth from '../../hooks/useAuth';
 import CreateTeam from '../../components/comMan/CreateTeam';
-import ManagerTeamsList from '../../features/teams/ManagerTeamsList';
+
+import ManBugWorkSpace from '../managerPages/ManBugWorkSpace';
+import DevQASpaces from '../devAndQaPages/DevQASpaces';
 
 const BugWorkspace = () => {
   const { status } = useAuth();
@@ -26,7 +28,7 @@ const BugWorkspace = () => {
               <a href="#">Bug Workspaces</a>
             </li>
             <li>
-              <i class='bx bx-chevron-right' ></i>
+              <i class='bx bx-chevron-right'></i>
             </li>
             <li>
               <a class="active" href="#">
@@ -38,15 +40,17 @@ const BugWorkspace = () => {
 
         {isManager && (
           <button onClick={toggleCreateTeamModal} class="btn-download">
-            <i class='bx bxs-cloud-download' ></i>
+            <i class='bx bxs-cloud-download'></i>
             <span class="text">Create Project</span>
           </button>
         )}
       </div>
 
-      <div>
-        <ManagerTeamsList />
-      </div>
+      {isManager ? (
+        <ManBugWorkSpace />
+      ) : (
+        <DevQASpaces />
+      )}
 
       {/* CreateTeam Modal */}
       <Modal
