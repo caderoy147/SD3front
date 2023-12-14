@@ -1,6 +1,9 @@
 import {Routes,Route} from 'react-router-dom'
 import Prefetch from './features/auth/Prefetch';
 
+
+import PersistLogin from './features/auth/PersistLogin';
+
 import Layout from './components/Layout';
 import Login from './features/auth/Login'
 import DashLayout from './components/DashLayout';
@@ -63,141 +66,126 @@ function App() {
         <Route index element={<LandingPage/>}/>
         <Route path="login" element={<Login/>}/>
         
-        <Route element={<Prefetch/>}>
+        <Route element={<PersistLogin/>}>
+          <Route element={<Prefetch/>}>
 
-          <Route path="dashboard" element={<DashLayout />}>
+            <Route path="dashboard" element={<DashLayout />}>
 
-            <Route index element={<Dashboard />} />
+              <Route index element={<Dashboard />} />
 
-            <Route path="notifications" element={<Notifications/>}/>
+              <Route path="notifications" element={<Notifications/>}/>
 
-            <Route path="bugWorkSpace">
-              <Route index element={<MyProjects />} />
-              <Route path=":id" element={<EditBug/>} />
-              <Route path="new" element={<NewBug/>} />
-            </Route>
+              <Route path="bugWorkSpace">
+                <Route index element={<MyProjects />} />
+                <Route path=":id" element={<EditBug/>} />
+                <Route path="new" element={<NewBug/>} />
+              </Route>
 
-            <Route path="bugStatus">
-              <Route index element={<BugStatus />} />
-              <Route path=":id" element={<EditUser/>} />
-              <Route path="new" element={<NewUserForm/>} />
-            </Route>
+              <Route path="bugStatus">
+                <Route index element={<BugStatus />} />
+                <Route path=":id" element={<EditUser/>} />
+                <Route path="new" element={<NewUserForm/>} />
+              </Route>
 
-            <Route path="user">
-              <Route index element={<BugStatus />} />
-              <Route path=":id" element={<EditUser/>} />
-              <Route path="new" element={<NewUserForm/>} />
-            </Route>
+              <Route path="user">
+                <Route index element={<BugStatus />} />
+                <Route path=":id" element={<EditUser/>} />
+                <Route path="new" element={<NewUserForm/>} />
+              </Route>
 
-            <Route path="bug">
-              <Route index element={<BugStatus />} />
-              <Route path=":id" element={<EditBug/>} />
-              <Route path="new" element={<NewBug/>} />
-            </Route>
-
-
-
-            <Route path="settings">
-              <Route index element={<Settings />} />
-            </Route>
-
-            <Route path="profile">
-              <Route index element={<Profile />} />
-            </Route>
+              <Route path="bug">
+                <Route index element={<BugStatus />} />
+                <Route path=":id" element={<EditBug/>} />
+                <Route path="new" element={<NewBug/>} />
+              </Route>
 
 
+
+              <Route path="settings">
+                <Route index element={<Settings />} />
+              </Route>
+
+              <Route path="profile">
+                <Route index element={<Profile />} />
+              </Route>
+
+
+              
+
+              {/* temporary views QA*/}
+              <Route path="QAacceptOrDeny">
+                <Route index element={<QAacceptOrDeny />} />
+              </Route>
+
+              <Route path="QAinsideBugStatus">
+                <Route index element={<QAinsideBugStatus />} />
+              </Route>
             
-
-            {/* temporary views QA*/}
-            <Route path="QAacceptOrDeny">
-              <Route index element={<QAacceptOrDeny />} />
-            </Route>
-
-            <Route path="QAinsideBugStatus">
-              <Route index element={<QAinsideBugStatus />} />
-            </Route>
-          
-            <Route path="QAinsideBugWorkspace">
-              <Route index element={<QAinsideBugWorkspace />} />
-            </Route>
+              <Route path="QAinsideBugWorkspace">
+                <Route index element={<QAinsideBugWorkspace />} />
+              </Route>
 
 
 
-            {/* temporary views DEV*/}
-            <Route path="DEVfixbug">
-              <Route index element={<DEVfixbug />} />
-            </Route>
-            <Route path="DEVfixbugdenied">
-              <Route index element={<DEVfixbugdenied />} />
-            </Route>
-            <Route path="DEVinisdebugstatus">
-              <Route index element={<DEVinisdebugstatus />} />
-            </Route>
+              {/* temporary views DEV*/}
+              <Route path="DEVfixbug">
+                <Route index element={<DEVfixbug />} />
+              </Route>
+              <Route path="DEVfixbugdenied">
+                <Route index element={<DEVfixbugdenied />} />
+              </Route>
+              <Route path="DEVinisdebugstatus">
+                <Route index element={<DEVinisdebugstatus />} />
+              </Route>
 
 
 
 
-            {/* temporary views Manager*/}
-            <Route path="ManBugWorkSpace">
-              <Route index element={<ManBugWorkSpace />} />
-            </Route>
-            <Route path="ManBugWorkSpaceEmpty">
-              <Route index element={<ManBugWorkSpaceEmpty />} />
-            </Route>
+              {/* temporary views Manager*/}
+              <Route path="ManBugWorkSpace">
+                <Route index element={<ManBugWorkSpace />} />
+              </Route>
+              <Route path="ManBugWorkSpaceEmpty">
+                <Route index element={<ManBugWorkSpaceEmpty />} />
+              </Route>
 
-            <Route path="ManInsideBugStatus">
-              <Route index element={<ManInsideBugStatus />} />
-            </Route>
+              <Route path="ManInsideBugStatus">
+                <Route index element={<ManInsideBugStatus />} />
+              </Route>
 
-            <Route path="ManInsideBugStatusFinished">
-              <Route index element={<ManInsideBugStatusFinished />} />
-            </Route>
+              <Route path="ManInsideBugStatusFinished">
+                <Route index element={<ManInsideBugStatusFinished />} />
+              </Route>
 
-            <Route path="ManInsideBugWorkSpace">
-              <Route index element={<ManInsideBugWorkSpace />} />
-            </Route>
+              <Route path="ManInsideBugWorkSpace">
+                <Route index element={<ManInsideBugWorkSpace />} />
+              </Route>
 
-            <Route path="ManInsideTheBug">
-              <Route index element={<ManInsideTheBug />} />
-            </Route>
+              <Route path="ManInsideTheBug">
+                <Route index element={<ManInsideTheBug />} />
+              </Route>
 
 
 
 
 
-            {/* temporary views DEV and QA*/}
-            <Route path="DevQABugWorkSpace">
-              <Route index element={<DevQABugWorkSpace/>} />
-            </Route>
-            <Route path="DevQABugWorkSpaceNone">
-              <Route index element={<DevQABugWorkSpaceNone/>} />
-            </Route>
-            <Route path="DevQAInisideTheBug">
-              <Route index element={<DevQAInisideTheBug/>} />
-            </Route>
+              {/* temporary views DEV and QA*/}
+              <Route path="DevQABugWorkSpace">
+                <Route index element={<DevQABugWorkSpace/>} />
+              </Route>
+              <Route path="DevQABugWorkSpaceNone">
+                <Route index element={<DevQABugWorkSpaceNone/>} />
+              </Route>
+              <Route path="DevQAInisideTheBug">
+                <Route index element={<DevQAInisideTheBug/>} />
+              </Route>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          </Route>{/* End Dash */}
-
+            </Route>{/* End Dash */}
+          </Route>
         </Route>
       </Route>
     </Routes>

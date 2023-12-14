@@ -8,7 +8,11 @@ const BugsList = () => {
         isSuccess,
         isError,
         error
-    } = useGetBugsQuery()
+    } =  useGetBugsQuery('bugsList', {
+        pollingInterval: 60000,
+        refetchOnFocus: true,
+        refetchOnMountOrArgChange: true
+    })
 
     let content
 

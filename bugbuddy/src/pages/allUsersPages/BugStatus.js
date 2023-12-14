@@ -9,10 +9,10 @@ const BugStatus= () => {
   return (
         <div className="box-info">
          <div className="table-data">
-            <UsersList/>
-            <TeamsList/>
-            <BugsList/>
-            <ProfilesList/>
+             <TeamsList/> 
+             {/* <UsersList/>
+             <BugsList/>
+             <ProfilesList/>  */}
           </div>
         </div>
   )

@@ -1,9 +1,12 @@
 import { useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons"
+
 import { useNavigate, Link, useLocation } from 'react-router-dom'
 
 import { useSendLogoutMutation } from '../features/auth/authApiSlice'
+
+
+import '../styles/dashboard.css';
+import '../index.css'
 
 const DASH_REGEX = /^\/dash(\/)?$/
 const BUGS_REGEX = /^\/dash\/bugs(\/)?$/
@@ -36,18 +39,15 @@ const DashHeader = () => {
 
     const logoutButton = (
         <button
-            className="icon-button"
+            className="bx bxs-log-out-circle"
             title="Logout"
             onClick={sendLogout}
         >
-            <FontAwesomeIcon icon={faRightFromBracket} />
         </button>
     )
 
     const content = (
-        <div className='logoutbutton' >
-       
-           
+        <div >
                     {/* add more buttons later */}
                     {logoutButton}
         

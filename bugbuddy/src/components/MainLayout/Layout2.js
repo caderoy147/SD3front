@@ -13,6 +13,7 @@ import { faBell } from "@fortawesome/free-solid-svg-icons"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 import DashHeader from '../DashHeader'
+import DashFooter from '../DashFooter';
 
 const Layout2 = ({ toggleSidebar }) => {
   const [isSearchFormVisible, setIsSearchFormVisible] = useState(false);
@@ -87,7 +88,7 @@ const Layout2 = ({ toggleSidebar }) => {
 
   return (
     <div>
-      <DashHeader/>
+      
       {/* NAVBAR */}
       <section id="content" className={contentClass} >
         <nav>
@@ -118,6 +119,10 @@ const Layout2 = ({ toggleSidebar }) => {
           <Link to="/dashboard/profile">
              <FontAwesomeIcon icon={faUser} />
           </Link>
+
+          <div>
+            <DashFooter/>
+          </div>
         </nav>
 
         <Modal
@@ -161,8 +166,8 @@ const Layout2 = ({ toggleSidebar }) => {
             </Link>
           </li>
           <li>
-            <Link to="/logout" className="logout">
-              <i className='bx bxs-log-out-circle'></i>
+            <Link className="logout">
+              <DashHeader/>
               <span className="text">Logout</span>
             </Link>
           </li>
