@@ -1,39 +1,65 @@
-import React from 'react'
-import '../../index.css'
-import TeamsList from '../../features/teams/TeamsList'
+import React, { useState } from 'react';
+import Modal from 'react-modal';
+import '../../index.css';
+
+import useAuth from '../../hooks/useAuth';
+import CreateTeam from '../../components/comMan/CreateTeam';
+import ManagerTeamsList from '../../features/teams/ManagerTeamsList';
 
 const BugWorkspace = () => {
+  const { status } = useAuth();
+  const isManager = status === 'Manager';
+
+  const [isCreateTeamModalOpen, setIsCreateTeamModalOpen] = useState(false);
+
+  const toggleCreateTeamModal = () => {
+    setIsCreateTeamModalOpen((prev) => !prev);
+  };
+
   return (
-			<div>
-				<div class="head-title">
-				<div class="left">
-					<h1>Bug Workspace</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Bug Workspaces</a>
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="#">Home</a>
-						</li>
-					</ul>
-				</div>
+    <div>
+      <div class="head-title">
+        <div class="left">
+          <h1>Bug Workspace</h1>
+          <ul class="breadcrumb">
+            <li>
+              <a href="#">Bug Workspaces</a>
+            </li>
+            <li>
+              <i class='bx bx-chevron-right' ></i>
+            </li>
+            <li>
+              <a class="active" href="#">
+                Home
+              </a>
+            </li>
+          </ul>
+        </div>
 
-				<a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Create Project</span>
-				</a>
-				
-			</div>
+        {isManager && (
+          <button onClick={toggleCreateTeamModal} class="btn-download">
+            <i class='bx bxs-cloud-download' ></i>
+            <span class="text">Create Project</span>
+          </button>
+        )}
+      </div>
 
+      <div>
+        <ManagerTeamsList />
+      </div>
 
-			<div>
-				<TeamsList/>
-			</div>
+      {/* CreateTeam Modal */}
+      <Modal
+        isOpen={isCreateTeamModalOpen}
+        onRequestClose={toggleCreateTeamModal}
+        contentLabel="Create Team"
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <CreateTeam onClose={toggleCreateTeamModal} />
+      </Modal>
+    </div>
+  );
+};
 
-
-			</div>
-  )
-}
-
-export default BugWorkspace
+export default BugWorkspace;

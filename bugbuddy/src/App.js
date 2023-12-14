@@ -25,7 +25,8 @@ import NewUserForm from './features/users/NewUserForm';
 import EditBug from './features/bugs/EditBug';
 import NewBug from './features/bugs/NewBug';
 
-
+import EditTeam from './features/teams/EditTeam'
+import NewTeam from './features/teams/NewTeamForm'
 
 //pages for dev
 import DEVfixbug from './pages/developerPages/DEVfixbug'
@@ -53,6 +54,7 @@ import QAinsideBugWorkspace from './pages/qaPages/QAinsideBugWorkspace'
 import DevQABugWorkSpace from './pages/devAndQaPages/DevQABugWorkSpace'
 import DevQABugWorkSpaceNone from './pages/devAndQaPages/DevQABugWorkSpaceNone'
 import DevQAInisideTheBug from './pages/devAndQaPages/DevQAInisideTheBug'
+import BugWorkspace from './pages/allUsersPages/BugWorkspace';
 
 
 
@@ -97,6 +99,12 @@ function App() {
                 <Route index element={<BugStatus />} />
                 <Route path=":id" element={<EditBug/>} />
                 <Route path="new" element={<NewBug/>} />
+              </Route>
+
+              <Route path="team">
+                <Route index element={<BugWorkspace />} />
+                <Route path=":id" element={<EditTeam/>} />
+                <Route path="new" element={<NewTeam/>} />
               </Route>
 
 
