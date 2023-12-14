@@ -17,7 +17,6 @@ export const bugsApiSlice = apiSlice.injectEndpoints({
           validateStatus: (response, result) => {
               return response.status === 200 && !result.isError
           },
-          keepUnusedDataFor: 5,
           transformResponse: responseData => {
               const loadedBugs = responseData.map(bug => {
                   bug.id = bug._id
@@ -34,11 +33,48 @@ export const bugsApiSlice = apiSlice.injectEndpoints({
               } else return [{ type: 'Bug', id: 'LIST' }]
           }
       }),
+      addNewBug: builder.mutation({
+          query: initialBug => ({
+              url: '/bugs',
+              method: 'POST',
+              body: {
+                  ...initialBug,
+              }
+          }),
+          invalidatesTags: [
+              { type: 'Bug', id: "LIST" }
+          ]
+      }),
+      updateBug: builder.mutation({
+          query: initialBug => ({
+              url: '/bugs',
+              method: 'PATCH',
+              body: {
+                  ...initialBug,
+              }
+          }),
+          invalidatesTags: (result, error, arg) => [
+              { type: 'Bug', id: arg.id }
+          ]
+      }),
+      deleteBug: builder.mutation({
+          query: ({ id }) => ({
+              url: `/bugs`,
+              method: 'DELETE',
+              body: { id }
+          }),
+          invalidatesTags: (result, error, arg) => [
+              { type: 'Bug', id: arg.id }
+          ]
+      }),
   }),
 })
 
 export const {
   useGetBugsQuery,
+  useAddNewBugMutation,
+  useUpdateBugMutation,
+  useDeleteBugMutation,
 } = bugsApiSlice
 
 // returns the query result object

@@ -8,7 +8,11 @@ const BugsList = () => {
         isSuccess,
         isError,
         error
-    } = useGetBugsQuery()
+    } =  useGetBugsQuery('bugsList', {
+        pollingInterval: 60000,
+        refetchOnFocus: true,
+        refetchOnMountOrArgChange: true
+    })
 
     let content
 
@@ -29,7 +33,7 @@ const BugsList = () => {
             <table className="table table--bugs">
                 <thead className="table__thead">
                     <tr>
-                        <th scope="col" className="table__th bug__status">Username</th>
+                        <th scope="col" className="table__th bug__status">Status</th>
                         <th scope="col" className="table__th bug__created">Created</th>
                         <th scope="col" className="table__th bug__updated">Updated</th>
                         <th scope="col" className="table__th bug__title">Title</th>

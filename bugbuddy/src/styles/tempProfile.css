@@ -1,0 +1,35 @@
+/* Assuming a mobile-first approach */
+
+/* Container for profiles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table header styles (optional) */
+.table thead {
+  background-color: #f2f2f2;
+}
+
+/* Table header cells */
+.table th {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table body cells */
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive image styles */
+.table img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Add more styles as needed for other profile details */

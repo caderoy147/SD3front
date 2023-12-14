@@ -15,10 +15,10 @@
 
 .containerBug{
     width: 100%;
-    max-width: 650px;
+    max-width: 1000px;
     background: rgba(0, 0, 0, 0.5);
     padding: 28px;
-    margin: 0 28px;
+    margin: 0 30px;
     border-radius: 10px;
     box-shadow: inset -2px 2px 2px white;
 }
@@ -53,14 +53,35 @@
 
 .user-input-box label{
     width: 95%;
-    color: white;
     font-size: 20px;
     font-weight: 400;
     margin: 5px 0;
 }
+.user-input-box span{
+    height: 60px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 10px 10px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.user-input-box select{
+    height: 60px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 10px 10px;
+
+}
 
 .user-input-box input{
-    height: 40px;
+    height: 60px;
     width: 95%;
     border-radius: 7px;
     outline: none;

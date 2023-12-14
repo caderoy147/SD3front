@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import '../styles/landingPage.css'
+import '../../index.css'
+import '../../styles/landingPage.css'
+
+
 
 
 const LandingPage = () => {
@@ -38,12 +41,11 @@ const LandingPage = () => {
                   <a href="#testimonial" className="nav__menu__item">Testimonial</a>
                 </div>
                 <div className="nav__menu">
-                  <a href="#" className="nav__menu__item">Login</a>
+                  <a href="#" className="nav__menu__item"><Link to="/login">login</Link></a>
                   <a href="#" className="btn btn-blue">Signup</a>
                 </div>
               </div>
             </div>
-            <i className='bx bx-menu nav__toggle'></i>
           </div>
         </div>
       </nav>

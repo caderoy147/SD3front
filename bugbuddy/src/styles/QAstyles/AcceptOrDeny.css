@@ -1,0 +1,33 @@
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px; /* Optional margin to separate from the table */
+}
+
+.blue-button, .red-button {
+  background-color: #3C91E6;;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 10px; /* Add margin between buttons */
+}
+
+.red-button {
+  background-color: red;
+  border-radius: 20px;
+}
+.blue-button:hover {
+  background-color: #000000; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+.red-button:hover {
+  background-color: #000000; /* Change background color on hover */
+  color: rgb(255, 255, 255); /* Change text color on hover */
+}
+
+

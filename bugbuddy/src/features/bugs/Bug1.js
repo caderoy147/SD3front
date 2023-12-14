@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { useSelector } from 'react-redux'
 import { selectBugById } from './bugsApiSlice'
+import "../../styles/bugReportList.css"
 
 const Bug1 = ({ bugId }) => {
 
@@ -28,7 +29,7 @@ const Bug1 = ({ bugId }) => {
                 </td>
                 <td className="table__cell bug__created">{created}</td>
                 <td className="table__cell bug__updated">{updated}</td>
-                <td className="table__cell bug__title">{bug.title}</td>
+                <td className="table__cell bug__title">{bug.bugName}</td>
                 <td className="table__cell bug__username">{bug.username}</td>
 
                 <td className="table__cell">

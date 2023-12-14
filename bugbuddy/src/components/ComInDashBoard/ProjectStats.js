@@ -3,7 +3,6 @@ import React from 'react'
 const ProjectStats = () => {
   return (
     <div>
-			<section id="content">
 				<main>
 						<ul className="box-info">
 						<li>
@@ -29,7 +28,6 @@ const ProjectStats = () => {
 						</li>
 					</ul>
 				</main>
-			</section>
     </div>
   )
 }

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+/* Add your font import and other common styles here */
+
+/* COMMON STYLES */
+
+.custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40%; /* Set a maximum width for the modal */
+    width: 90vw; /* Set a percentage width for responsiveness */
+    max-height: 80vh; /* Set a maximum height for the modal */
+    overflow: auto; /* Enable scrolling if content exceeds the height */
+    background: white;
+   
+}
+
+.custom-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add more custom styles as needed */
+}
+
+.notification-container {
+    max-height: 80vh; /* Adjust max-height for responsiveness */
+    background: white;
+    overflow-y: auto;
+}
+
+/* NOTIFICATION CONTAINER */
+
+.containerNotif {
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh; /* Adjust max-height for responsiveness */
+    font-size: smaller;
+    background: white;
+    overflow-y: auto;
+}
+
+.containerNotif:hover {
+    cursor: pointer;
+    background-color: #FAFAFA;
+}
+
+/* NOTIFICATION ITEM */
+
+.notif {
+    display: flex;
+    position: relative;
+    padding: 1rem; /* Adjust padding for smaller screens */
+}
+
+.notif .description {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#profile {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+    border-radius: 50%;
+    width: 17%;
+    height: 17%;
+    object-fit: cover;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .custom-modal {
+        max-width: 90%;
+    }
+
+    .notification-container,
+    .containerNotif {
+        max-height: 70vh;
+    }
+
+    .notif {
+        padding: 0.5rem;
+    }
+
+    #profile {
+        width: 25%;
+        height: 25%;
+    }
+}

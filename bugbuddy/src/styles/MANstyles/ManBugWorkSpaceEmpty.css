@@ -1,0 +1,53 @@
+
+
+/********PROJECT********/
+
+.npManager{
+    padding-top: 100px;
+    padding-left: 60px;
+}
+.npManager h2{
+    font-size: 40px;
+    /* font-weight: lighter; */
+    padding-left: 30%;
+}
+.npManager h4{
+    padding-top: 13px;
+    color: gray;
+    padding-left: 31%;
+    font-weight:lighter;
+}
+
+.form-submit-btn-Man-Np{
+    margin-top: 140px;
+	display: flex;
+	margin-inline: 20px;
+    padding-left: 30%;
+    padding-top: 20px;
+    align-items: center;
+}
+.form-submit-btn-Man-Np input{
+    width: 40%;
+    margin-top: 10px;
+    font-size: 30px;
+		font-weight: bold;
+    padding: 10px;
+    border:none;
+    border-radius: 30px;
+    color: #ffffff;
+    background: #3C91E6;
+    height: 80px;
+}
+
+.form-submit-btn-Man-Np input:hover{
+    background: #000000;
+    color: #ffffff;
+	transition: .8s;
+}
+.button-container-Man-Np{
+	display: flexbox;
+	justify-content: center;
+	align-items: center;
+}
+
+
