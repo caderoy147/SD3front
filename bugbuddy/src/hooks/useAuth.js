@@ -26,7 +26,7 @@ const useAuth = () => {
 
     if (isManager) status = "Manager";
     if (isQualityAssurance) status = "Quality Assurance";
-    if (isAdmin) status = "Admin";
+    if (isDeveloper) status = "Developer";
   }
 
   return { id, username, roles, status, isManager, isQualityAssurance, isDeveloper, isAdmin };

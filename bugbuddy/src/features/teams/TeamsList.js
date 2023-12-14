@@ -31,15 +31,16 @@ const TeamsList = () => {
             <table className="table table--teams">
                 <thead className="table__thead">
                     <tr>
-                        <th scope="col" className="table__th team__teamname">Status</th>
                         <th scope="col" className="table__th team__teamname">Teamname</th>
+                        <th scope="col" className="table__th team__teamname">Date Created</th>
+                        <th scope="col" className="table__th team__teamname">Progress</th>
                         {/* <th scope="col" className="table__th team__edit">Teamname</th> */}
                     </tr>
                 </thead>
                 <tbody>
                     {tableContent}
                 </tbody>
-            </table>
+            </table>    
         )
     }
 

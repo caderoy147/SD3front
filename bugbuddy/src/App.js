@@ -56,7 +56,8 @@ import DevQANone from './pages/devAndQaPages/DevQANone';
 import DevQAInisideTheBug from './pages/devAndQaPages/DevQAInisideTheBug'
 import BugWorkspace from './pages/allUsersPages/BugWorkspace';
 
-
+import DEVinsideBugStatusList from './components/comDev/DEVinsideBugStatusList';
+import DEVinsideBugStatusCall from './components/comDev/DEVinsideBugStatusCall';
 
 
 function App() {
@@ -106,6 +107,8 @@ function App() {
                 <Route path=":id" element={<EditTeam/>} />
                 <Route path="new" element={<NewTeam/>} />
               </Route>
+
+              
 
 
 
@@ -188,6 +191,10 @@ function App() {
                 <Route index element={<DevQAInisideTheBug/>} />
               </Route>
 
+
+              <Route path="DEVinisdebugstatus/:teamId" element={<DEVinsideBugStatusList />} /> 
+              <Route path="DEVinsideBugStatusCall/:teamId" element={<DEVinsideBugStatusCall />} /> 
+            
 
 
 

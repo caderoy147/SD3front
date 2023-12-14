@@ -1,45 +1,67 @@
-import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { selectBugById } from '../../features/bugs/bugsApiSlice'
+import { useNavigate, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectBugById, selectBugsByTeam } from '../../features/bugs/bugsApiSlice';
+import useAuth from '../../hooks/useAuth';
 
-const DEVinsideBugStatusCall = ({ bugId }) => {
-    const bug = useSelector(state => selectBugById(state, bugId))
-    const navigate = useNavigate()
+const DEVinsideBugStatusCall = () => {
+    const { teamId, bugId } = useParams();
+    const authUser = useAuth();
+    const navigate = useNavigate();
 
-    if (bug) {
-        const created = new Date(bug.createdAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
-        const updated = new Date(bug.updatedAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
+    // Select bugs that belong to the specific team
+    const bugsByTeam = useSelector(state => selectBugsByTeam(state, teamId));
 
-        const handleEdit = () => navigate(`/dash/bugs/${bugId}`)
-        const handleConfirm = () => navigate(`/dashboard/QAacceptOrDeny`)
-        const handleView = () => navigate(`/dashboard/QAacceptOrDeny`)
-        const handleReview =() => navigate(`/dashboard/QAacceptOrDeny`)
-        const handleFix = () => navigate(`/dashboard/QAacceptOrDeny`)
-        
-        let buttonLabel = 'View'
-        let buttonAction = handleView
+    console.log('Auth User:', authUser);
+    console.log('Bugs by Team:', bugsByTeam);
+    console.log('Auth User ID:', authUser.id);
+    console.log('Bugs by TeamName:', bugsByTeam.map(bug => bug.bugName));
+    console.log('Bugs by TeamDev:', bugsByTeam.map(bug => bug.dev));
+    console.log('Bugs by TeamMAn:', bugsByTeam.map(bug => bug.manager))
+    console.log('Bugs by TeamQa:', bugsByTeam.map(bug => bug.qa))
 
-        if (bug.remarks === 'denied') {
-            buttonLabel = 'Fix'
-            buttonAction = handleFix
-        }
-
+    if (bugsByTeam && authUser) {
         return (
-            <tr>
-                <td className="table__cell bug__title" onClick={handleConfirm}>{bug.bugName}</td>
-                <td className="table__cell bug__created">{created}</td>
-                <td className="table__cell bug__created">{updated}</td>
-                <td className="table__cell bug__status">
-                    <span className={`bug__status--${bug.remarks}`}>{bug.remarks}</span>
-                    <button onClick={buttonAction}>{buttonLabel}</button>
-                </td>
-            </tr>
-        )
+            <div>
+                {bugsByTeam.map(bug => (
+                    <tr key={bug.id}>
+                        <td className="table__cell bug__title" onClick={() => navigate(`/dash/bugs/${bug.id}`)}>
+                            {bug.bugName}
+                        </td>
+                        <td className="table__cell bug__created">
+                            {new Date(bug.createdAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })}
+                        </td>
+                        <td className="table__cell bug__created">
+                            {new Date(bug.updatedAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })}
+                        </td>
+                        <td className="table__cell bug__status">
+                            <button
+                                onClick={() => navigate(`/dashboard/QAacceptOrDeny`)}
+                                className={`${
+                                    bug.remarks === 'denied'
+                                        ? 'DEVprojectstatus'
+                                        : bug.remarks === 'review'
+                                        ? 'red-button-DEVprojectstatus'
+                                        : 'green-button-DEVprojectstatus'
+                                }`}
+                            >
+                                {bug.remarks === 'denied' ? 'Fix' : 'View'}
+                            </button>
+                        </td>
+                        <td>
+                            <span className={`bug__status--${bug.remarks}`}>{bug.remarks}</span>
+                        </td>
+                    </tr>
+                ))}
+                <p>HI</p>
+            </div>
+        );
     } else {
-        return null
+        return (
+            <div>
+                <p>User is not authorized to view this bug.</p>
+            </div>
+        );
     }
-}
+};
 
-export default DEVinsideBugStatusCall
-
-
+export default DEVinsideBugStatusCall;

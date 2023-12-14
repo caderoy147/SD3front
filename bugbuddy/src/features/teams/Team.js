@@ -22,25 +22,38 @@ const Team = ({ teamId }) => {
             return null;
         }
 
+
         return (
             <tr className="table__row">
-                <td className="table__cell team__status">
-                    {team.completed
-                        ? <span className="team__status--completed">Completed</span>
-                        : <span className="team__status--open">Open</span>
-                    }
+
+                <td>
+                        {team.teamname}
                 </td>
+
                 <td className="table__cell team__title">
                     {/* Make the team name clickable and redirect to QAinsideBugWorkspace */}
                     <button
                         className="team-link"
                         onClick={() => {
-                            navigate('/dashboard/QAinsideBugWorkspace');
+                            if (authUser.isQualityAssurance) {
+                                navigate(`/dashboard/QAinsideBugWorkspace/${team._id}`);
+                            } else if (authUser.isDeveloper) {
+                                navigate(`/dashboard/DEVinisdebugstatus/${team._id}`);
+                            }
                         }}
                     >
-                        {team.teamname}
+                        {team.projectname}
                     </button>
                 </td>
+
+                <td>
+                   50%
+                </td>
+
+
+
+
+
                 <td className="table__cell">
                     <button
                         className="icon-button table__button"

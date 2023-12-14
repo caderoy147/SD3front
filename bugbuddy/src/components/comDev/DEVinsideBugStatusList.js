@@ -1,5 +1,7 @@
-import { useGetBugsQuery } from "../../features/bugs/bugsApiSlice"
-import Bug from "./DEVinsideBugStatusCall"
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useGetBugsQuery, selectBugsByTeam } from "../../features/bugs/bugsApiSlice";
+import DEVinsideBugStatusCall from "./DEVinsideBugStatusCall";
 
 const DEVinsideBugStatusList = () => {
     const {
@@ -8,23 +10,23 @@ const DEVinsideBugStatusList = () => {
         isSuccess,
         isError,
         error
-    } = useGetBugsQuery()
+    } = useGetBugsQuery();
 
-    let content
+    const { teamId } = useParams();
 
-    if (isLoading) content = <p>Loading...</p>
+    const bugsByTeam = useSelector(state => selectBugsByTeam(state, teamId));
+
+    let content;
+
+    if (isLoading) content = <p>Loading...</p>;
 
     if (isError) {
-        content = <p className="errmsg">{error?.data?.message}</p>
+        content = <p className="errmsg">{error?.data?.message}</p>;
     }
 
     if (isSuccess) {
-        const { ids } = bugs
-
-        const tableContent = ids?.length
-            ? ids.map(bugId => <Bug key={bugId} bugId={bugId} />)
-            : null
-
+        
+        console.log('Bugs in DEVinsideBugStatusList:', bugsByTeam);
         content = (
             <table>
                 <thead>
@@ -37,12 +39,13 @@ const DEVinsideBugStatusList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {tableContent}
+                    <DEVinsideBugStatusCall/> 
                 </tbody>
             </table>
-        )
+        );
     }
 
-    return content
-}
-export default DEVinsideBugStatusList
+    return content;
+};
+
+export default DEVinsideBugStatusList;
