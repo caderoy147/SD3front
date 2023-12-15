@@ -1,0 +1,26 @@
+/* Add this CSS within your component or import it as a separate CSS file */
+
+.Rpage .valid {
+  border: 2px solid #4CAF50; /* Green border for valid input */
+}
+
+.Rpage .invalid {
+  border: 2px solid #FF4444; /* Red border for invalid input */
+}
+
+/* Additional styling for the form container */
+.Rpage form {
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Styling for other elements as needed */
+.Rpage label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.Rpage .errmsg {
+  color: #FF4444;
+  margin-top: 10px;
+}

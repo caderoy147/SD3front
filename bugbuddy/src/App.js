@@ -60,6 +60,10 @@ import DEVinsideBugStatusList from './components/comDev/DEVinsideBugStatusList';
 import DEVinsideBugStatusCall from './components/comDev/DEVinsideBugStatusCall';
 
 
+//regiserpage
+import RegisterPage from './pages/allUsersPages//RegisterPage'
+
+
 function App() {
 
   return (
@@ -68,6 +72,7 @@ function App() {
 
         <Route index element={<LandingPage/>}/>
         <Route path="login" element={<Login/>}/>
+        <Route path="register" element={<RegisterPage/>}/>
         
         <Route element={<PersistLogin/>}>
           <Route element={<Prefetch/>}>
