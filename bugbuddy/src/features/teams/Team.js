@@ -39,6 +39,8 @@ const Team = ({ teamId }) => {
                                 navigate(`/dashboard/QAinsideBugWorkspace/${team._id}`);
                             } else if (authUser.isDeveloper) {
                                 navigate(`/dashboard/DEVinisdebugstatus/${team._id}`);
+                            }else if (authUser.isManager) {
+                                navigate(`/dashboard/ManInsideBugStatusFinished`);
                             }
                         }}
                     >

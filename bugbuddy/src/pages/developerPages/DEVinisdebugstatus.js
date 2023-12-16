@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/DEVstyles/DEVprojectstatus.css'
 import DEVinsideBugStatusList from '../../components/comDev/DEVinsideBugStatusList'
-
+import DEVinsideBugStatusCall from '../../components/comDev/DEVinsideBugStatusCall'
 
 
 const DEVinisdebugstatus = () => {
@@ -32,11 +32,10 @@ const DEVinisdebugstatus = () => {
 					<table>
 						<tbody>
 							<DEVinsideBugStatusList/>
-							
 						</tbody>
 					</table>
 				</div>
-				
+		
 			</div>
 
 

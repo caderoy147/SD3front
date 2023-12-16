@@ -21,7 +21,7 @@ const DEVinsideBugStatusCall = () => {
 
     if (bugsByTeam && authUser) {
         return (
-            <div>
+            <>
                 {bugsByTeam.map(bug => (
                     <tr key={bug.id}>
                         <td className="table__cell bug__title" onClick={() => navigate(`/dash/bugs/${bug.id}`)}>
@@ -52,14 +52,15 @@ const DEVinsideBugStatusCall = () => {
                         </td>
                     </tr>
                 ))}
-                <p>HI</p>
-            </div>
+            </>
         );
     } else {
         return (
-            <div>
-                <p>User is not authorized to view this bug.</p>
-            </div>
+            <tr>
+                <td colSpan="5">
+                    <p>User is not authorized to view this bug.</p>
+                </td>
+            </tr>
         );
     }
 };

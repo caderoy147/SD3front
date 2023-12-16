@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../styles/MANstyles/ManInsideBugStatus.css'
+import MANinsideBugStatusList from '../../components/comMan/MANinsideBugStatusList'
+
 
 const ManInsideBugStatusFinished = () => {
   return (
@@ -23,31 +25,11 @@ const ManInsideBugStatusFinished = () => {
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3></h3>
+						<MANinsideBugStatusList/>
 					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Progress</th>
-								<th>Proof</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><p>Angelo Jhann Salas</p></td>
-								<td><p>Developer</p></td>
-								<td><p>Ongoing</p></td>
-								<td><button className="ManStatsFinishedBtn">View</button></td>
-							</tr>
-							
-						</tbody>
-					</table>
 				</div>
-				
 			</div>
-
+			
     </div>
   )
 }

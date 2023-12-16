@@ -197,11 +197,12 @@ function App() {
               </Route>
 
 
-              <Route path="DEVinisdebugstatus/:teamId" element={<DEVinsideBugStatusList />} /> 
-              <Route path="DEVinsideBugStatusCall/:teamId" element={<DEVinsideBugStatusCall />} /> 
-            
+              <Route path="DEVinisdebugstatus/:teamId" element={<DEVinisdebugstatus/>} /> 
 
+              {/* <Route path="DEVinsideBugStatusCall/:teamId" element={<DEVinsideBugStatusCall />} /> 
+             */}
 
+              <Route path="QAinsideBugWorkspace/:teamId" element={<QAinsideBugWorkspace/>} /> 
 
 
             </Route>{/* End Dash */}
